@@ -1,4 +1,4 @@
-<h2 align="left">Hi 👋! My name is Ishank Gupta and I'm a Web Developer from India.</h2>
+<h2 align="left">Hi 👋! My name is Ishank Gupta and I'm a Software Engineer from India.</h2>
 <p align="left">I specialize in creating dynamic, user-friendly websites and applications.</p>
 <p align="left">I'm a passionate web developer experienced in JavaScript, TypeScript, React, Node.js, and more. I love solving problems and building impactful products.</p>
 
