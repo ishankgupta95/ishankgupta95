@@ -1,4 +1,6 @@
-<h2 align="left">Hi 👋! My name is Ishank Gupta and I'm a Web developer from India</h2>
+<h2 align="left">Hi 👋! My name is Ishank Gupta and I'm a Web Developer from India.</h2>
+<p align="left">I specialize in creating dynamic, user-friendly websites and applications.</p>
+<p align="left">I'm a passionate web developer experienced in JavaScript, TypeScript, React, Node.js, and more. I love solving problems and building impactful products.</p>
 
 ###
 
@@ -9,6 +11,7 @@
 
 ###
 
+<h4 align="left">🚀 Tech Stack:</h4>
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
   <img width="12" />
@@ -29,6 +32,7 @@
 
 ###
 
+<h4 align="left">🌐 Connect with Me:</h4>
 <div align="left">
   <a href="mailto:ishank1995@gmail.com">
     <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo" />
