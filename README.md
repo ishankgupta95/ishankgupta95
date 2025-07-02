@@ -1,7 +1,9 @@
 <h2 align="left">Hi 👋 I'm Ishank Gupta — a Software Engineer from India 🇮🇳</h2>
 
 <p align="left">
-  I specialize in building dynamic, responsive web applications, with a focus on React and TypeScript.
+  I specialize in building dynamic, responsive web applications, with a focus on React and TypeScript.<br>
+  I actively integrate AI tools into my workflow to accelerate development, improve code quality, and streamline testing.<br>
+  Currently, I'm expanding my skillset by learning Three.js to build immersive 3D experiences for the web.
 </p>
 
 ---
