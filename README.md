@@ -13,6 +13,21 @@ I'm currently expanding my skillset with **Three.js** to craft immersive 3D expe
 
 ---
 
+### 🔨 What I'm Building
+
+#### 🕉️ panchang-ts
+A pure **TypeScript** npm package for accurate Hindu Panchang calculations — covering Tithi, Nakshatra, Yoga, Karana, Vara, Sunrise/Sunset, Rahu Kalam, Gulika, Yamaganda, and Abhijit Muhurta. Built offline-first with zero native dependencies, making it fully compatible with **React Native** and Hermes environments.
+
+<a href="https://www.npmjs.com/package/panchang-ts" target="_blank">
+  <img src="https://img.shields.io/badge/npm-panchang--ts-CB3837?style=for-the-badge&logo=npm&logoColor=white" height="30" alt="panchang-ts on npm" />
+</a>
+&nbsp;
+<a href="https://ishankgupta95.github.io/panchang-website/" target="_blank">
+  <img src="https://img.shields.io/badge/Website-panchang--website-4A90D9?style=for-the-badge&logo=githubpages&logoColor=white" height="30" alt="panchang-website" />
+</a>
+
+---
+
 ### 🚀 Tech Stack
 
 <div align="left">
