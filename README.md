@@ -25,8 +25,18 @@ A pure TypeScript npm package for accurate Hindu Panchang calculations — Tithi
   <img src="https://img.shields.io/badge/npm-panchang--ts-CB3837?style=for-the-badge&logo=npm&logoColor=white" height="28" />
 </a>
 &nbsp;
-<a href="https://ishankgupta95.github.io/panchang-website/">
+<a href="https://dharmagya.app">
   <img src="https://img.shields.io/badge/Website-Live-4A90D9?style=for-the-badge&logo=githubpages&logoColor=white" height="28" />
+</a>
+
+<br/><br/>
+
+**🔄 Transmute** &nbsp; ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![WebAssembly](https://img.shields.io/badge/WebAssembly-654FF0?style=flat-square&logo=webassembly&logoColor=white)
+
+A browser-based file conversion toolkit — convert images, PDFs, audio, and video entirely client-side using WebAssembly. No uploads, no servers, fully private.
+
+<a href="https://transmute.tools">
+  <img src="https://img.shields.io/badge/Website-Live-4A90D9?style=for-the-badge&logo=googlechrome&logoColor=white" height="28" />
 </a>
 
 ---
