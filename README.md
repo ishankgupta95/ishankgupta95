@@ -11,8 +11,6 @@
 
 Frontend-focused software engineer passionate about building fast, scalable, and maintainable web applications. I specialize in **React** and **TypeScript**, and actively integrate AI tools into my workflow to accelerate development, improve code quality, and streamline testing.
 
-Currently expanding my skillset with **Three.js** to craft immersive 3D experiences on the web.
-
 ---
 
 ### 🔨 What I'm Building
