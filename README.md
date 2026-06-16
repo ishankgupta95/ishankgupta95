@@ -1,15 +1,20 @@
 <div align="center">
-  <h1>Hi, I'm Ishank Gupta 👋</h1>
-  <p>Software Engineer · React & TypeScript Specialist · India 🇮🇳</p>
-</div>
 
-<br/>
+# Hi, I'm Ishank Gupta 👋
+
+**Software Engineer · React & TypeScript Specialist · Pune, India 🇮🇳**
+
+Building fast, private, offline-first products for the web and mobile.
+
+</div>
 
 ---
 
 ### 👨‍💻 About Me
 
-Frontend-focused software engineer passionate about building fast, scalable, and maintainable web applications. I specialize in **React** and **TypeScript**, and actively integrate AI tools into my workflow to accelerate development, improve code quality, and streamline testing.
+Frontend-focused engineer who ships end to end. I specialize in **React** and **TypeScript**, care a lot about performance and clean state management, and lean on AI tooling to move faster without cutting corners. Right now I'm going deep on LLM application development (RAG, agents, and evals) as the next layer of my toolkit.
+
+🟢 **Open to senior frontend and full-stack roles**, remote or India-based.
 
 ---
 
@@ -17,12 +22,18 @@ Frontend-focused software engineer passionate about building fast, scalable, and
 
 **🕉️ panchang-ts** &nbsp; ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![npm](https://img.shields.io/badge/npm-published-CB3837?style=flat-square&logo=npm&logoColor=white)
 
-A pure TypeScript npm package for accurate Hindu Panchang calculations — Tithi, Nakshatra, Yoga, Karana, Vara, Sunrise/Sunset, Rahu Kalam, Gulika, Yamaganda, and Abhijit Muhurta. Built offline-first with zero native dependencies, fully compatible with React Native and Hermes.
+A pure TypeScript npm package for accurate Hindu Panchang calculations: Tithi, Nakshatra, Yoga, Karana, Vara, Sunrise/Sunset, Rahu Kalam, Gulika, Yamaganda, and Abhijit Muhurta. Offline-first with zero native dependencies, fully compatible with React Native and Hermes. Powers Dharmagya (below).
 
 <a href="https://www.npmjs.com/package/panchang-ts">
   <img src="https://img.shields.io/badge/npm-panchang--ts-CB3837?style=for-the-badge&logo=npm&logoColor=white" height="28" />
 </a>
-&nbsp;
+
+<br/><br/>
+
+**🪔 Dharmagya** &nbsp; ![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black) ![iOS](https://img.shields.io/badge/iOS-000000?style=flat-square&logo=apple&logoColor=white) ![Android](https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white)
+
+A live devotional app for Android and iOS: daily Panchang, aartis, and the Hindu calendar in one place. Built on panchang-ts for accurate, fully offline astronomical calculations.
+
 <a href="https://dharmagya.app">
   <img src="https://img.shields.io/badge/Website-Live-4A90D9?style=for-the-badge&logo=githubpages&logoColor=white" height="28" />
 </a>
@@ -31,32 +42,48 @@ A pure TypeScript npm package for accurate Hindu Panchang calculations — Tithi
 
 **🔄 Transmute** &nbsp; ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![WebAssembly](https://img.shields.io/badge/WebAssembly-654FF0?style=flat-square&logo=webassembly&logoColor=white)
 
-A browser-based file conversion toolkit — convert images, PDFs, audio, and video entirely client-side using WebAssembly. No uploads, no servers, fully private.
+A browser-based file conversion toolkit. Convert images, PDFs, audio, and video entirely client-side using WebAssembly. No uploads, no servers, fully private.
 
 <a href="https://transmute.tools">
   <img src="https://img.shields.io/badge/Website-Live-4A90D9?style=for-the-badge&logo=googlechrome&logoColor=white" height="28" />
+</a>
+
+<br/><br/>
+
+**📱 Onstage** &nbsp; ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+
+A browser-based studio for App Store and Google Play screenshots: 24 device frames, 20 layouts, and pixel-exact exports for every store slot, rendered entirely client-side. Built for indie devs who are tired of rebuilding the same frames in Figma.
+
+<a href="https://ishankgupta95.github.io/OnStage/">
+  <img src="https://img.shields.io/badge/Website-Live-4A90D9?style=for-the-badge&logo=googlechrome&logoColor=white" height="28" />
+</a>
+&nbsp;
+<a href="https://ishankgupta95.github.io/OnStage/dashboard/">
+  <img src="https://img.shields.io/badge/Open-Editor-222222?style=for-the-badge&logo=react&logoColor=white" height="28" />
 </a>
 
 ---
 
 ### 🚀 Tech Stack
 
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" title="JavaScript" alt="JavaScript" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="30" title="TypeScript" alt="TypeScript" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" title="React" alt="React" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="30" title="Node.js" alt="Node.js" />&nbsp;
-  <img src="https://skillicons.dev/icons?i=express" height="30" title="Express.js" alt="Express.js" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" title="HTML5" alt="HTML5" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" title="CSS3" alt="CSS3" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" title="Python" alt="Python" />
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,tailwind,python,html,css,git" />
+</div>
+
+---
+
+### 📊 GitHub Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=ishankgupta95&show_icons=true&hide_border=true&theme=tokyonight" height="160" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ishankgupta95&layout=compact&hide_border=true&theme=tokyonight" height="160" alt="Top Languages" />
 </div>
 
 ---
 
 ### 🌐 Let's Connect
 
-<div align="left">
+<div align="center">
   <a href="https://ishankgupta95.github.io/portfolio-website/" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Portfolio&logo=githubpages&label=&color=222222&logoColor=white&style=for-the-badge" height="32" alt="Portfolio" />
   </a>&nbsp;
