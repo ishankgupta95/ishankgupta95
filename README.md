@@ -75,8 +75,7 @@ A browser-based studio for App Store and Google Play screenshots: 24 device fram
 ### 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ishankgupta95&show_icons=true&hide_border=true&theme=tokyonight&v=2" height="160" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ishankgupta95&layout=compact&hide_border=true&theme=tokyonight&v=2" height="160" alt="Top Languages" />
+  <img src="https://metrics.lecoq.io/ishankgupta95?template=classic" height="160" alt="GitHub Stats" />
 </div>
 
 ---
