@@ -69,15 +69,6 @@ A browser-based studio for App Store and Google Play screenshots: 24 device fram
 <div align="center">
   <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,tailwind,python,html,css,git" />
 </div>
-
----
-
-### 📊 GitHub Stats
-
-<div align="center">
-  <img src="https://metrics.lecoq.io/ishankgupta95?template=classic" height="160" alt="GitHub Stats" />
-</div>
-
 ---
 
 ### 🌐 Let's Connect
