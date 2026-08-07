@@ -42,5 +42,3 @@
 
 > Privacy is an architecture decision, not a policy page. Transmute cannot leak
 > your files because it never receives them.
-
----
