@@ -19,7 +19,6 @@ var ishank = Engineer{
 	Learning: []string{"retrieval", "agent design", "eval harnesses"},
 }
 
-// Reachable at the addresses below. Cold starts welcome.
 func main() { ishank.Ship() }
 ```
 
