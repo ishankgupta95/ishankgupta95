@@ -1,0 +1,82 @@
+{
+ "ishankgupta95/Frontend-Interview-Prep-Master-Checklist": {
+  "additions": 298,
+  "deletions": 75,
+  "head": "52ab1b96ce37f0105ee84020de9b2e6151408a71"
+ },
+ "ishankgupta95/OnStage": {
+  "additions": 0,
+  "deletions": 0,
+  "head": null
+ },
+ "ishankgupta95/Wattnik": {
+  "additions": 0,
+  "deletions": 0,
+  "head": null
+ },
+ "ishankgupta95/dharmagya": {
+  "additions": 46385,
+  "deletions": 10108,
+  "head": "781b81a5762589bd067019cf019e3653636d7265"
+ },
+ "ishankgupta95/dharmagya-website": {
+  "additions": 45484,
+  "deletions": 6642,
+  "head": "0614d41d4559d4eecbcc18c5b70c889092b1e803"
+ },
+ "ishankgupta95/hindu-devotional-texts": {
+  "additions": 20945,
+  "deletions": 1668,
+  "head": "e4dce51ad86cec8c9a1f5f1572b6d8c51596c73b"
+ },
+ "ishankgupta95/ishankgupta95": {
+  "additions": 323,
+  "deletions": 233,
+  "head": "4b492130882f0158f5581482181a68d00376db60"
+ },
+ "ishankgupta95/life-skill-co": {
+  "additions": 13578,
+  "deletions": 0,
+  "head": "02674d4ffcd5123cebe12e2e87c33dcf82f1737d"
+ },
+ "ishankgupta95/nic": {
+  "additions": 22294,
+  "deletions": 1735,
+  "head": "41cd56a031781b7e050351887c5a3f09c686b9a6"
+ },
+ "ishankgupta95/nic-android-native": {
+  "additions": 32679,
+  "deletions": 17503,
+  "head": "a3ec584fe198962a6378d742d2e19bc763c0c700"
+ },
+ "ishankgupta95/panchang-ts": {
+  "additions": 33088,
+  "deletions": 7601,
+  "head": "b8d63192883b45e9572829b7c00fb8c85fb2bdc2"
+ },
+ "ishankgupta95/portfolio-website": {
+  "additions": 1,
+  "deletions": 74,
+  "head": "0a43cb5aab2c32abc4b1dd465e23020c469cdf6c"
+ },
+ "ishankgupta95/react-drills": {
+  "additions": 0,
+  "deletions": 0,
+  "head": null
+ },
+ "ishankgupta95/tier_list": {
+  "additions": 106,
+  "deletions": 75,
+  "head": "da4c87f476d86b47944c34b93d36a90c5ef16340"
+ },
+ "ishankgupta95/transmute": {
+  "additions": 8630,
+  "deletions": 1585,
+  "head": "7863f3d8462038568a075c6603821b293e0e6fb8"
+ },
+ "ishankgupta95/transmute-deprecated": {
+  "additions": 0,
+  "deletions": 0,
+  "head": null
+ }
+}

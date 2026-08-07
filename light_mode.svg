@@ -39,9 +39,9 @@ text, tspan {white-space: pre;}
 <tspan x="15" y="410"></tspan>
 <tspan x="15" y="430"><tspan class="dim">- </tspan><tspan class="title">GitHub Stats</tspan></tspan>
 <tspan x="15" y="450"><tspan class="dim">-───────────────────────────────────────────────────────────────</tspan></tspan>
-<tspan x="15" y="470"><tspan class="dim">.</tspan><tspan class="key">Repos</tspan><tspan class="dim">: </tspan><tspan class="dim">.................................... </tspan><tspan class="value">6</tspan><tspan class="dim">  {</tspan><tspan class="key">Contributed</tspan><tspan class="dim">: </tspan><tspan class="value">0</tspan><tspan class="dim">}</tspan></tspan>
-<tspan x="15" y="490"><tspan class="dim">.</tspan><tspan class="key">Commits</tspan><tspan class="dim">: </tspan><tspan class="dim">.................................................... </tspan><tspan class="value">0</tspan></tspan>
-<tspan x="15" y="510"><tspan class="dim">.</tspan><tspan class="key">Lines of Code</tspan><tspan class="dim">: </tspan><tspan class="dim">.................................. </tspan><tspan class="value">0</tspan><tspan class="dim">  (</tspan><tspan class="add">0</tspan><tspan class="add">++</tspan><tspan class="dim">, </tspan><tspan class="del">0</tspan><tspan class="del">--</tspan><tspan class="dim">)</tspan></tspan>
+<tspan x="15" y="470"><tspan class="dim">.</tspan><tspan class="key">Repos</tspan><tspan class="dim">: </tspan><tspan class="dim">................................... </tspan><tspan class="value">16</tspan><tspan class="dim">  {</tspan><tspan class="key">Contributed</tspan><tspan class="dim">: </tspan><tspan class="value">0</tspan><tspan class="dim">}</tspan></tspan>
+<tspan x="15" y="490"><tspan class="dim">.</tspan><tspan class="key">Commits</tspan><tspan class="dim">: </tspan><tspan class="dim">................................................ </tspan><tspan class="value">2,718</tspan></tspan>
+<tspan x="15" y="510"><tspan class="dim">.</tspan><tspan class="key">Lines of Code</tspan><tspan class="dim">: </tspan><tspan class="dim">................. </tspan><tspan class="value">176,512</tspan><tspan class="dim">  (</tspan><tspan class="add">223,811</tspan><tspan class="add">++</tspan><tspan class="dim">, </tspan><tspan class="del">47,299</tspan><tspan class="del">--</tspan><tspan class="dim">)</tspan></tspan>
 </text>
-<!--stats {"additions": 0, "commits": 0, "contributed": 0, "deletions": 0, "followers": 5, "repos": 6, "stars": 0} -->
+<!--stats {"additions": 223811, "commits": 2718, "contributed": 0, "deletions": 47299, "followers": 5, "repos": 16, "stars": 1} -->
 </svg>
