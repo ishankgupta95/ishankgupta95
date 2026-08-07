@@ -1,29 +1,9 @@
-```go
-package main
-
-type Engineer struct {
-	Role     string
-	Frontend []string
-	Backend  []string
-	Thesis   string
-	Shipping []string
-	Learning []string
-}
-
-var ishank = Engineer{
-	Role:     "Engineer",
-	Frontend: []string{"TypeScript", "React", "Next.js", "React Native"},
-	Backend:  []string{"Go", "Rust", "Node"},
-	Thesis:   "If it can run on the client, it should run on the client.",
-	Shipping: []string{"panchang-ts", "Dharmagya", "Transmute", "Onstage"},
-	Learning: []string{"retrieval", "agent design", "eval harnesses"},
-}
-
-func main() { ishank.Ship() }
-```
-
-React and TypeScript on the front, Go and Rust on the back. Most of what I build
-ships without a server at all, and the parts that need one stay small and fast.
+<a href="https://ishank.dev">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishankgupta95/ishankgupta95/master/dark_mode.svg">
+    <img alt="Ishank Gupta's GitHub profile" src="https://raw.githubusercontent.com/ishankgupta95/ishankgupta95/master/light_mode.svg">
+  </picture>
+</a>
 
 ## Projects
 
@@ -54,17 +34,6 @@ ships without a server at all, and the parts that need one stay small and fast.
   Onstage    ──▶  canvas compositor      ──▶  PNG     │ client only
 ```
 
-## Stack
-
-| | |
-| :-- | :-- |
-| **Languages** | TypeScript, Go, Rust, JavaScript, Python |
-| **Web** | React, Next.js, Tailwind |
-| **State and data** | Zustand, React Query, Zod |
-| **Mobile** | React Native, Expo |
-| **Backend** | Go, Rust, Node, Express, PostgreSQL |
-| **Tooling** | Nx monorepos, WebAssembly, Git |
-
 ## Working notes
 
 > Astronomical math is unforgiving. `panchang-ts` exists because most Panchang
@@ -74,17 +43,4 @@ ships without a server at all, and the parts that need one stay small and fast.
 > Privacy is an architecture decision, not a policy page. Transmute cannot leak
 > your files because it never receives them.
 
-> Go and Rust earn their place where TypeScript starts fighting the problem. Go
-> for concurrency and single-binary deploys with no runtime to babysit, Rust when
-> the cost of a wrong assumption should be a compile error rather than a pager.
-
-> Offline-first is a performance strategy in disguise. No spinner beats a render
-> that never waited on a network.
-
-## Elsewhere
-
-| | |
-| :-- | :-- |
-| Portfolio | [ishank.dev](https://ishank.dev) |
-| LinkedIn | [in/ishankg](https://www.linkedin.com/in/ishankg/) |
-| Email | [ishank1995@gmail.com](mailto:ishank1995@gmail.com) |
+---

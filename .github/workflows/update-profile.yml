@@ -1,0 +1,43 @@
+name: Update profile SVGs
+
+on:
+  schedule:
+    # 04:00 UTC daily (09:30 IST)
+    - cron: "0 4 * * *"
+  push:
+    branches: [master]
+    paths:
+      - generate_profile.py
+      - .github/workflows/update-profile.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-profile
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate SVGs
+        env:
+          # Classic PAT with `repo` + `read:user`, stored as a repo secret.
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+        run: python3 generate_profile.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "chore: refresh profile stats"
+          git push
