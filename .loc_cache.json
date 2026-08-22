@@ -60,7 +60,7 @@
   "deletions": 233,
   "head": "4b492130882f0158f5581482181a68d00376db60",
   "languages": {
-   "Python": 34846
+   "Python": 29266
   }
  },
  "ishankgupta95/life-skill-co": {
@@ -95,7 +95,7 @@
   "deletions": 0,
   "head": null,
   "languages": {
-   "Go": 2859,
+   "Go": 2862,
    "Makefile": 164
   }
  },

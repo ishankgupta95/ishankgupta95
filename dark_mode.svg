@@ -87,7 +87,6 @@ line {stroke-width: 1;}
 <rect x="747.0" y="144" width="57.5" height="9" fill="#e0a03a"/>
 <text x="576.0" y="171.0" font-size="9" class="f-dim">npm · ios · android · web</text>
 <text x="22.0" y="220.0" font-size="9" class="f-dim" letter-spacing="1.8">LANGUAGE MIX</text>
-<text x="818.0" y="220.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">304.5k OF 304.8k LINES ATTRIBUTED</text>
 <clipPath id="langbar"><rect x="22" y="230" width="796" height="16" rx="3"/></clipPath>
 <g clip-path="url(#langbar)">
 <rect x="22.0" y="230" width="628.8" height="16" fill="#3178c6"/>
@@ -151,5 +150,5 @@ line {stroke-width: 1;}
 <line x1="22.0" y1="424.0" x2="818.0" y2="424.0" class="s-edge"/>
 <text x="22.0" y="442.0" font-size="10" class="f-dim">2,720 commits · 18 repos · 10 years</text>
 <text x="818.0" y="442.0" font-size="10" class="f-dim" text-anchor="end">ishank.dev  ·  in/ishankg  ·  ishank1995@gmail.com</text>
-<!--readings {"additions": 304757, "attributed": 304459, "bays": [{"label": "panchang-ts", "loc": 99850, "note": "ephemeris core", "stack": "TypeScript", "status": "npm"}, {"label": "dharmagya", "loc": 46385, "note": "ios \u00b7 android", "stack": "React Native", "status": "app store"}, {"label": "transmute", "loc": 8630, "note": "browser only", "stack": "WebAssembly", "status": "live"}, {"label": "onstage", "loc": 0, "note": "store assets", "stack": "Canvas", "status": "live"}], "commits": 2720, "deletions": 94878, "lang_other": 2569, "langs": [["TypeScript", 240328], ["Java", 32679], ["JavaScript", 24185], ["Kotlin", 2804], ["HTML", 1894]], "npm_packages": ["panchang-ts"], "npm_total": 8898, "npm_weeks": [331, 860, 432, 250, 448, 55, 501, 528, 116, 116, 576, 166, 98, 136, 174, 145, 67, 379, 497, 1294, 1259, 397], "repos": 18, "shipped": 4, "stamp": "2026-08-22 05:28 UTC", "uptime_d": 221, "uptime_y": 10} -->
+<!--readings {"additions": 304757, "attributed": 304459, "bays": [{"label": "panchang-ts", "loc": 99850, "note": "ephemeris core", "stack": "TypeScript", "status": "npm"}, {"label": "dharmagya", "loc": 46385, "note": "ios \u00b7 android", "stack": "React Native", "status": "app store"}, {"label": "transmute", "loc": 8630, "note": "browser only", "stack": "WebAssembly", "status": "live"}, {"label": "onstage", "loc": 0, "note": "store assets", "stack": "Canvas", "status": "live"}], "commits": 2720, "deletions": 94878, "lang_other": 2569, "langs": [["TypeScript", 240328], ["Java", 32679], ["JavaScript", 24185], ["Kotlin", 2804], ["HTML", 1894]], "npm_packages": ["panchang-ts"], "npm_total": 8898, "npm_weeks": [331, 860, 432, 250, 448, 55, 501, 528, 116, 116, 576, 166, 98, 136, 174, 145, 67, 379, 497, 1294, 1259, 397], "repos": 18, "shipped": 4, "stamp": "2026-08-22 05:44 UTC", "uptime_d": 221, "uptime_y": 10} -->
 </svg>
