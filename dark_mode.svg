@@ -1,47 +1,155 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,Menlo,DejaVu Sans Mono,monospace" width="644px" height="530px" font-size="16px">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="460"
+     viewBox="0 0 840 460" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" role="img"
+     aria-label="ISHANK GUPTA — GitHub activity readout">
+<title>ISHANK GUPTA — GitHub activity readout</title>
 <style>
-@font-face {
-src: local('Consolas');
-font-family: 'ConsolasFallback';
-font-display: swap;
-size-adjust: 109%;
-}
-.key {fill: #ffa657;}
-.value {fill: #a5d6ff;}
-.add {fill: #3fb950;}
-.del {fill: #f85149;}
-.dim {fill: #616e7f;}
-.title {fill: #d2a8ff;}
-text, tspan {white-space: pre;}
+text {fill: #d6dee7;}
+.f-bg {fill: #0b0f14;}
+.f-panel {fill: #111820;}
+.f-edge {fill: #1d2833;}
+.f-grid {fill: #19212b;}
+.f-fg {fill: #d6dee7;}
+.f-dim {fill: #66788a;}
+.f-faint {fill: #33414f;}
+.f-ok {fill: #35c46a;}
+.f-warn {fill: #e0a03a;}
+.f-crit {fill: #f0603f;}
+.f-accent {fill: #4fc3d9;}
+.s-bg {stroke: #0b0f14;}
+.s-panel {stroke: #111820;}
+.s-edge {stroke: #1d2833;}
+.s-grid {stroke: #19212b;}
+.s-fg {stroke: #d6dee7;}
+.s-dim {stroke: #66788a;}
+.s-faint {stroke: #33414f;}
+.s-ok {stroke: #35c46a;}
+.s-warn {stroke: #e0a03a;}
+.s-crit {stroke: #f0603f;}
+.s-accent {stroke: #4fc3d9;}
+line {stroke-width: 1;}
+#led {animation: pulse 2.4s ease-in-out infinite;}
+@keyframes pulse {0%,100% {opacity: 1;} 50% {opacity: 0.25;}}
+@media (prefers-reduced-motion: reduce) {#led {animation: none;}}
 </style>
-<rect width="644px" height="530px" fill="#161b22" rx="15"/>
-<text x="15" y="30" fill="#c9d1d9" xml:space="preserve">
-<tspan x="15" y="30"><tspan class="title">Ishank Gupta</tspan></tspan>
-<tspan x="15" y="50"><tspan class="dim">-───────────────────────────────────────────────────────────────</tspan></tspan>
-<tspan x="15" y="70"><tspan class="dim">.</tspan><tspan class="key">Coding since</tspan><tspan class="dim">: </tspan><tspan class="dim">................................. </tspan><tspan class="value">2017  (9 years)</tspan></tspan>
-<tspan x="15" y="90"><tspan class="dim">.</tspan><tspan class="key">Location</tspan><tspan class="dim">: </tspan><tspan class="dim">......................................... </tspan><tspan class="value">Pune, India</tspan></tspan>
-<tspan x="15" y="110"><tspan class="dim">.</tspan><tspan class="key">Work</tspan><tspan class="dim">: </tspan><tspan class="dim">....................... </tspan><tspan class="value">Project Lead @ Persistent Systems</tspan></tspan>
-<tspan x="15" y="130"><tspan class="dim">.</tspan><tspan class="key">Shipping</tspan><tspan class="dim">: </tspan><tspan class="dim">.......... </tspan><tspan class="value">panchang-ts, Dharmagya, Transmute, Onstage</tspan></tspan>
-<tspan x="15" y="150"><tspan class="dim">.</tspan><tspan class="key">Learning</tspan><tspan class="dim">: </tspan><tspan class="dim">................................................ </tspan><tspan class="value">Rust</tspan></tspan>
-<tspan x="15" y="170"></tspan>
-<tspan x="15" y="190"><tspan class="dim">.</tspan><tspan class="key">Languages.Programming</tspan><tspan class="dim">: </tspan><tspan class="dim">........... </tspan><tspan class="value">TypeScript, Go, Rust, Python</tspan></tspan>
-<tspan x="15" y="210"><tspan class="dim">.</tspan><tspan class="key">Languages.Spoken</tspan><tspan class="dim">: </tspan><tspan class="dim">.............................. </tspan><tspan class="value">English, Hindi</tspan></tspan>
-<tspan x="15" y="230"></tspan>
-<tspan x="15" y="250"><tspan class="dim">.</tspan><tspan class="key">Hobbies.Software</tspan><tspan class="dim">: </tspan><tspan class="dim">.............. </tspan><tspan class="value">driver tinkering, overclocking</tspan></tspan>
-<tspan x="15" y="270"><tspan class="dim">.</tspan><tspan class="key">Hobbies.Hardware</tspan><tspan class="dim">: </tspan><tspan class="dim">.. </tspan><tspan class="value">building PCs and home servers, 3D printing</tspan></tspan>
-<tspan x="15" y="290"></tspan>
-<tspan x="15" y="310"><tspan class="dim">- </tspan><tspan class="title">Contact</tspan></tspan>
-<tspan x="15" y="330"><tspan class="dim">-───────────────────────────────────────────────────────────────</tspan></tspan>
-<tspan x="15" y="350"><tspan class="dim">.</tspan><tspan class="key">Email</tspan><tspan class="dim">: </tspan><tspan class="dim">................................... </tspan><tspan class="value">ishank1995@gmail.com</tspan></tspan>
-<tspan x="15" y="370"><tspan class="dim">.</tspan><tspan class="key">Portfolio</tspan><tspan class="dim">: </tspan><tspan class="dim">......................................... </tspan><tspan class="value">ishank.dev</tspan></tspan>
-<tspan x="15" y="390"><tspan class="dim">.</tspan><tspan class="key">LinkedIn</tspan><tspan class="dim">: </tspan><tspan class="dim">.......................................... </tspan><tspan class="value">in/ishankg</tspan></tspan>
-<tspan x="15" y="410"></tspan>
-<tspan x="15" y="430"><tspan class="dim">- </tspan><tspan class="title">GitHub Stats</tspan></tspan>
-<tspan x="15" y="450"><tspan class="dim">-───────────────────────────────────────────────────────────────</tspan></tspan>
-<tspan x="15" y="470"><tspan class="dim">.</tspan><tspan class="key">Repos</tspan><tspan class="dim">: </tspan><tspan class="dim">................................... </tspan><tspan class="value">18</tspan><tspan class="dim">  {</tspan><tspan class="key">Contributed</tspan><tspan class="dim">: </tspan><tspan class="value">0</tspan><tspan class="dim">}</tspan></tspan>
-<tspan x="15" y="490"><tspan class="dim">.</tspan><tspan class="key">Commits</tspan><tspan class="dim">: </tspan><tspan class="dim">................................................ </tspan><tspan class="value">2,720</tspan></tspan>
-<tspan x="15" y="510"><tspan class="dim">.</tspan><tspan class="key">Lines of Code</tspan><tspan class="dim">: </tspan><tspan class="dim">................. </tspan><tspan class="value">209,879</tspan><tspan class="dim">  (</tspan><tspan class="add">304,757</tspan><tspan class="add">++</tspan><tspan class="dim">, </tspan><tspan class="del">94,878</tspan><tspan class="del">--</tspan><tspan class="dim">)</tspan></tspan>
-</text>
-<!--stats {"additions": 304757, "commits": 2720, "contributed": 0, "deletions": 94878, "followers": 5, "repos": 18, "stars": 2} -->
+<rect width="840" height="460" class="f-bg" rx="10"/>
+<rect x="0.0" y="0.0" width="840.0" height="58.0" class="f-panel"/>
+<line x1="0.0" y1="57.5" x2="840.0" y2="57.5" class="s-edge"/>
+<text x="22.0" y="27.0" font-size="17" class="fg" letter-spacing="2.4" font-weight="600">ISHANK GUPTA</text>
+<text x="22.0" y="43.0" font-size="9" class="f-dim" letter-spacing="1.6">PROJECT LEAD @ PERSISTENT</text>
+<text x="818.0" y="40.0" font-size="9" class="f-ok" text-anchor="end" letter-spacing="1.4">ONLINE</text>
+<circle cx="773.0" cy="36.5" r="3" class="f-ok" id="led"/>
+<text x="818.0" y="24.0" font-size="11" class="fg" text-anchor="end">10y 221d</text>
+<text x="740.0" y="24.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">UPTIME</text>
+<text x="740.0" y="40.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">node pune-01</text>
+<rect x="22.0" y="78.0" width="256.0" height="106.0" class="f-panel" stroke="#1d2833" rx="6"/>
+<text x="36.0" y="98.0" font-size="9" class="f-dim" letter-spacing="1.8">LINES WRITTEN</text>
+<text x="36.0" y="130.0" font-size="27" class="fg" font-weight="600">304,757</text>
+<rect x="36.0" y="144" width="174.4" height="9" fill="#35c46a"/>
+<rect x="209.9" y="144" width="54.6" height="9" fill="#f0603f"/>
+<text x="36.0" y="171.0" font-size="9" class="f-dim">−94,878 erased · 8 repos</text>
+<rect x="292.0" y="78.0" width="256.0" height="106.0" class="f-panel" stroke="#1d2833" rx="6"/>
+<text x="306.0" y="98.0" font-size="9" class="f-dim" letter-spacing="1.8">NPM INSTALLS</text>
+<text x="306.0" y="130.0" font-size="27" class="fg" font-weight="600">8,898</text>
+<text x="393.0" y="130.0" font-size="10" class="f-dim">/yr</text>
+<rect x="306.0" y="151.0" width="6.6" height="2.0" class="f-faint" opacity="0.55"/>
+<rect x="315.6" y="151.0" width="6.6" height="2.0" class="f-faint" opacity="0.55"/>
+<rect x="325.2" y="149.7" width="6.6" height="3.3" class="f-accent"/>
+<rect x="334.9" y="144.4" width="6.6" height="8.6" class="f-accent"/>
+<rect x="344.5" y="148.7" width="6.6" height="4.3" class="f-accent"/>
+<rect x="354.1" y="150.5" width="6.6" height="2.5" class="f-accent"/>
+<rect x="363.8" y="148.5" width="6.6" height="4.5" class="f-accent"/>
+<rect x="373.4" y="151.0" width="6.6" height="2.0" class="f-accent"/>
+<rect x="383.0" y="148.0" width="6.6" height="5.0" class="f-accent"/>
+<rect x="392.6" y="147.7" width="6.6" height="5.3" class="f-accent"/>
+<rect x="402.2" y="151.0" width="6.6" height="2.0" class="f-accent"/>
+<rect x="411.9" y="151.0" width="6.6" height="2.0" class="f-accent"/>
+<rect x="421.5" y="147.2" width="6.6" height="5.8" class="f-accent"/>
+<rect x="431.1" y="151.0" width="6.6" height="2.0" class="f-accent"/>
+<rect x="440.8" y="151.0" width="6.6" height="2.0" class="f-accent"/>
+<rect x="450.4" y="151.0" width="6.6" height="2.0" class="f-accent"/>
+<rect x="460.0" y="151.0" width="6.6" height="2.0" class="f-accent"/>
+<rect x="469.6" y="151.0" width="6.6" height="2.0" class="f-accent"/>
+<rect x="479.2" y="151.0" width="6.6" height="2.0" class="f-accent"/>
+<rect x="488.9" y="149.2" width="6.6" height="3.8" class="f-accent"/>
+<rect x="498.5" y="148.0" width="6.6" height="5.0" class="f-accent"/>
+<rect x="508.1" y="140.0" width="6.6" height="13.0" class="f-accent"/>
+<rect x="517.8" y="140.4" width="6.6" height="12.6" class="f-accent"/>
+<rect x="527.4" y="149.0" width="6.6" height="4.0" class="f-accent"/>
+<text x="306.0" y="171.0" font-size="9" class="f-dim">panchang-ts · last 12 months</text>
+<rect x="562.0" y="78.0" width="256.0" height="106.0" class="f-panel" stroke="#1d2833" rx="6"/>
+<text x="576.0" y="98.0" font-size="9" class="f-dim" letter-spacing="1.8">SHIPPED</text>
+<text x="576.0" y="130.0" font-size="27" class="fg" font-weight="600">4</text>
+<text x="598.2" y="130.0" font-size="10" class="f-dim">projects</text>
+<rect x="576.0" y="144" width="57.5" height="9" fill="#3178c6"/>
+<rect x="633.0" y="144" width="57.5" height="9" fill="#61dafb"/>
+<rect x="690.0" y="144" width="57.5" height="9" fill="#654ff0"/>
+<rect x="747.0" y="144" width="57.5" height="9" fill="#e0a03a"/>
+<text x="576.0" y="171.0" font-size="9" class="f-dim">npm · ios · android · web</text>
+<text x="22.0" y="220.0" font-size="9" class="f-dim" letter-spacing="1.8">LANGUAGE MIX</text>
+<text x="818.0" y="220.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">155.3k OF 304.8k LINES ATTRIBUTED</text>
+<clipPath id="langbar"><rect x="22" y="230" width="796" height="16" rx="3"/></clipPath>
+<g clip-path="url(#langbar)">
+<rect x="22.0" y="230" width="501.6" height="16" fill="#3178c6"/>
+<rect x="523.1" y="230" width="168.0" height="16" fill="#b07219"/>
+<rect x="690.6" y="230" width="111.6" height="16" fill="#f1e05a"/>
+<rect x="801.7" y="230" width="14.6" height="16" fill="#a97bff"/>
+<rect x="815.8" y="230" width="2.2" height="16" fill="#3572a5"/>
+<rect x="817.5" y="230.0" width="0.5" height="16.0" class="f-faint" opacity="0.6"/>
+</g>
+<circle cx="25.5" cy="260.5" r="3.2" fill="#3178c6"/>
+<text x="35.0" y="264.0" font-size="10" class="f-dim">TypeScript 97.7k</text>
+<circle cx="154.5" cy="260.5" r="3.2" fill="#b07219"/>
+<text x="164.0" y="264.0" font-size="10" class="f-dim">Java 32.7k</text>
+<circle cx="247.5" cy="260.5" r="3.2" fill="#f1e05a"/>
+<text x="257.0" y="264.0" font-size="10" class="f-dim">JavaScript 21.7k</text>
+<circle cx="376.5" cy="260.5" r="3.2" fill="#a97bff"/>
+<text x="386.0" y="264.0" font-size="10" class="f-dim">Kotlin 2.7k</text>
+<circle cx="475.5" cy="260.5" r="3.2" fill="#3572a5"/>
+<text x="485.0" y="264.0" font-size="10" class="f-dim">Python 323</text>
+<circle cx="568.5" cy="260.5" r="3.2" fill="#33414f"/>
+<text x="578.0" y="264.0" font-size="10" class="f-dim">other 107</text>
+<text x="22.0" y="304.0" font-size="9" class="f-dim" letter-spacing="1.8">DRIVE BAYS</text>
+<text x="722.0" y="304.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">LINES</text>
+<text x="818.0" y="304.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">STATUS</text>
+<line x1="22.0" y1="312.0" x2="818.0" y2="312.0" class="s-edge"/>
+<text x="22.0" y="327.0" font-size="9" class="f-dim">0</text>
+<text x="40.0" y="327.0" font-size="12" class="fg">panchang-ts</text>
+<circle cx="202.0" cy="323.0" r="3.2" fill="#3178c6"/>
+<text x="212.0" y="327.0" font-size="10" class="f-dim">TypeScript</text>
+<text x="322.0" y="327.0" font-size="10" class="f-dim" opacity="0.75">ephemeris core</text>
+<rect x="544.0" y="319.0" width="130.0" height="6.0" class="f-faint" rx="1" opacity="0.5"/>
+<rect x="544.0" y="319.0" width="130.0" height="6.0" class="f-accent" rx="1"/>
+<text x="722.0" y="327.0" font-size="11" class="fg" text-anchor="end">99.8k</text>
+<text x="818.0" y="327.0" font-size="11" class="f-dim" text-anchor="end">npm</text>
+<text x="22.0" y="352.0" font-size="9" class="f-dim">1</text>
+<text x="40.0" y="352.0" font-size="12" class="fg">dharmagya</text>
+<circle cx="202.0" cy="348.0" r="3.2" fill="#61dafb"/>
+<text x="212.0" y="352.0" font-size="10" class="f-dim">React Native</text>
+<text x="322.0" y="352.0" font-size="10" class="f-dim" opacity="0.75">ios · android</text>
+<rect x="544.0" y="344.0" width="130.0" height="6.0" class="f-faint" rx="1" opacity="0.5"/>
+<rect x="544.0" y="344.0" width="60.4" height="6.0" class="f-accent" rx="1"/>
+<text x="722.0" y="352.0" font-size="11" class="fg" text-anchor="end">46.4k</text>
+<text x="818.0" y="352.0" font-size="11" class="f-dim" text-anchor="end">app store</text>
+<text x="22.0" y="377.0" font-size="9" class="f-dim">2</text>
+<text x="40.0" y="377.0" font-size="12" class="fg">transmute</text>
+<circle cx="202.0" cy="373.0" r="3.2" fill="#654ff0"/>
+<text x="212.0" y="377.0" font-size="10" class="f-dim">WebAssembly</text>
+<text x="322.0" y="377.0" font-size="10" class="f-dim" opacity="0.75">browser only</text>
+<rect x="544.0" y="369.0" width="130.0" height="6.0" class="f-faint" rx="1" opacity="0.5"/>
+<rect x="544.0" y="369.0" width="11.2" height="6.0" class="f-accent" rx="1"/>
+<text x="722.0" y="377.0" font-size="11" class="fg" text-anchor="end">8.6k</text>
+<text x="818.0" y="377.0" font-size="11" class="f-dim" text-anchor="end">live</text>
+<text x="22.0" y="402.0" font-size="9" class="f-dim">3</text>
+<text x="40.0" y="402.0" font-size="12" class="fg">onstage</text>
+<circle cx="202.0" cy="398.0" r="3.2" fill="#e0a03a"/>
+<text x="212.0" y="402.0" font-size="10" class="f-dim">Canvas</text>
+<text x="322.0" y="402.0" font-size="10" class="f-dim" opacity="0.75">store assets</text>
+<rect x="544.0" y="394.0" width="130.0" height="6.0" class="f-faint" rx="1" opacity="0.5"/>
+<text x="722.0" y="402.0" font-size="11" class="fg" text-anchor="end">—</text>
+<text x="818.0" y="402.0" font-size="11" class="f-dim" text-anchor="end">live</text>
+<line x1="22.0" y1="424.0" x2="818.0" y2="424.0" class="s-edge"/>
+<text x="22.0" y="442.0" font-size="10" class="f-dim">2,720 commits · 8 repos · 10 years</text>
+<text x="818.0" y="442.0" font-size="10" class="f-dim" text-anchor="end">ishank.dev  ·  in/ishankg  ·  ishank1995@gmail.com</text>
+<!--readings {"additions": 304757, "attributed": 155252, "bays": [{"label": "panchang-ts", "loc": 99850, "note": "ephemeris core", "stack": "TypeScript", "status": "npm"}, {"label": "dharmagya", "loc": 46385, "note": "ios \u00b7 android", "stack": "React Native", "status": "app store"}, {"label": "transmute", "loc": 8630, "note": "browser only", "stack": "WebAssembly", "status": "live"}, {"label": "onstage", "loc": 0, "note": "store assets", "stack": "Canvas", "status": "live"}], "commits": 2720, "contributed": 0, "deletions": 94878, "followers": 5, "lang_count": 10, "lang_other": 107, "langs": [["TypeScript", 97732], ["Java", 32679], ["JavaScript", 21664], ["Kotlin", 2748], ["Python", 323]], "npm_labels": ["2026-03-19", "2026-03-26", "2026-04-02", "2026-04-09", "2026-04-16", "2026-04-23", "2026-04-30", "2026-05-07", "2026-05-14", "2026-05-21", "2026-05-28", "2026-06-04", "2026-06-11", "2026-06-18", "2026-06-25", "2026-07-02", "2026-07-09", "2026-07-16", "2026-07-23", "2026-07-30", "2026-08-06", "2026-08-13"], "npm_packages": ["panchang-ts"], "npm_total": 8898, "npm_trimmed": true, "npm_weeks": [331, 860, 432, 250, 448, 55, 501, 528, 116, 116, 576, 166, 98, 136, 174, 145, 67, 379, 497, 1294, 1259, 397], "repos": 8, "shipped": 4, "stamp": "2026-08-22 05:10 UTC", "stars": 1, "uptime_d": 221, "uptime_y": 10} -->
 </svg>

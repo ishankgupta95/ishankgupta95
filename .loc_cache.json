@@ -32,7 +32,10 @@
  "ishankgupta95/ishankgupta95": {
   "additions": 323,
   "deletions": 233,
-  "head": "4b492130882f0158f5581482181a68d00376db60"
+  "head": "4b492130882f0158f5581482181a68d00376db60",
+  "languages": {
+   "Python": 16085
+  }
  },
  "ishankgupta95/life-skill-co": {
   "additions": 13578,
@@ -42,22 +45,38 @@
  "ishankgupta95/nic": {
   "additions": 22294,
   "deletions": 1735,
-  "head": "41cd56a031781b7e050351887c5a3f09c686b9a6"
+  "head": "41cd56a031781b7e050351887c5a3f09c686b9a6",
+  "languages": {
+   "JavaScript": 29823,
+   "Kotlin": 4192
+  }
  },
  "ishankgupta95/nic-android-native": {
   "additions": 32679,
   "deletions": 17503,
-  "head": "a3ec584fe198962a6378d742d2e19bc763c0c700"
+  "head": "a3ec584fe198962a6378d742d2e19bc763c0c700",
+  "languages": {
+   "Java": 377474
+  }
  },
  "ishankgupta95/olx-api": {
   "additions": 0,
   "deletions": 0,
-  "head": null
+  "head": null,
+  "languages": {
+   "Go": 2859,
+   "Makefile": 164
+  }
  },
  "ishankgupta95/panchang-ts": {
   "additions": 99850,
   "deletions": 44141,
-  "head": "12eda3e8066b15bcbc3bddca1ce92745979c3f35"
+  "head": "12eda3e8066b15bcbc3bddca1ce92745979c3f35",
+  "languages": {
+   "JavaScript": 58607,
+   "Shell": 1763,
+   "TypeScript": 2712127
+  }
  },
  "ishankgupta95/portfolio-website": {
   "additions": 1,
@@ -67,17 +86,31 @@
  "ishankgupta95/react-drills": {
   "additions": 0,
   "deletions": 0,
-  "head": null
+  "head": null,
+  "languages": {
+   "CSS": 16706,
+   "HTML": 667,
+   "JavaScript": 111252
+  }
  },
  "ishankgupta95/students-api": {
   "additions": 0,
   "deletions": 0,
-  "head": null
+  "head": null,
+  "languages": {
+   "Go": 8232
+  }
  },
  "ishankgupta95/tier_list": {
   "additions": 106,
   "deletions": 75,
-  "head": "da4c87f476d86b47944c34b93d36a90c5ef16340"
+  "head": "da4c87f476d86b47944c34b93d36a90c5ef16340",
+  "languages": {
+   "CSS": 4380,
+   "HTML": 358,
+   "JavaScript": 734,
+   "TypeScript": 6073
+  }
  },
  "ishankgupta95/transmute": {
   "additions": 8630,
