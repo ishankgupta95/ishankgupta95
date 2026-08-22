@@ -47,7 +47,7 @@ line {stroke-width: 1;}
 <text x="36.0" y="130.0" font-size="27" class="fg" font-weight="600">304,757</text>
 <rect x="36.0" y="144" width="174.4" height="9" fill="#1a7f37"/>
 <rect x="209.9" y="144" width="54.6" height="9" fill="#cf222e"/>
-<text x="36.0" y="171.0" font-size="9" class="f-dim">−94,878 erased · 8 repos</text>
+<text x="36.0" y="171.0" font-size="9" class="f-dim">−94,878 erased · 18 repos</text>
 <rect x="292.0" y="78.0" width="256.0" height="106.0" class="f-panel" stroke="#d9e0e8" rx="6"/>
 <text x="306.0" y="98.0" font-size="9" class="f-dim" letter-spacing="1.8">NPM INSTALLS</text>
 <text x="306.0" y="130.0" font-size="27" class="fg" font-weight="600">8,898</text>
@@ -87,28 +87,28 @@ line {stroke-width: 1;}
 <rect x="747.0" y="144" width="57.5" height="9" fill="#e0a03a"/>
 <text x="576.0" y="171.0" font-size="9" class="f-dim">npm · ios · android · web</text>
 <text x="22.0" y="220.0" font-size="9" class="f-dim" letter-spacing="1.8">LANGUAGE MIX</text>
-<text x="818.0" y="220.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">155.3k OF 304.8k LINES ATTRIBUTED</text>
+<text x="818.0" y="220.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">304.5k OF 304.8k LINES ATTRIBUTED</text>
 <clipPath id="langbar"><rect x="22" y="230" width="796" height="16" rx="3"/></clipPath>
 <g clip-path="url(#langbar)">
-<rect x="22.0" y="230" width="501.6" height="16" fill="#3178c6"/>
-<rect x="523.1" y="230" width="168.0" height="16" fill="#b07219"/>
-<rect x="690.6" y="230" width="111.6" height="16" fill="#f1e05a"/>
-<rect x="801.7" y="230" width="14.6" height="16" fill="#a97bff"/>
-<rect x="815.8" y="230" width="2.2" height="16" fill="#3572a5"/>
-<rect x="817.5" y="230.0" width="0.5" height="16.0" class="f-faint" opacity="0.6"/>
+<rect x="22.0" y="230" width="628.8" height="16" fill="#3178c6"/>
+<rect x="650.3" y="230" width="85.9" height="16" fill="#b07219"/>
+<rect x="735.8" y="230" width="63.7" height="16" fill="#f1e05a"/>
+<rect x="799.0" y="230" width="7.8" height="16" fill="#a97bff"/>
+<rect x="806.3" y="230" width="5.5" height="16" fill="#e34c26"/>
+<rect x="811.3" y="230.0" width="6.7" height="16.0" class="f-faint" opacity="0.6"/>
 </g>
 <circle cx="25.5" cy="260.5" r="3.2" fill="#3178c6"/>
-<text x="35.0" y="264.0" font-size="10" class="f-dim">TypeScript 97.7k</text>
-<circle cx="154.5" cy="260.5" r="3.2" fill="#b07219"/>
-<text x="164.0" y="264.0" font-size="10" class="f-dim">Java 32.7k</text>
-<circle cx="247.5" cy="260.5" r="3.2" fill="#f1e05a"/>
-<text x="257.0" y="264.0" font-size="10" class="f-dim">JavaScript 21.7k</text>
-<circle cx="376.5" cy="260.5" r="3.2" fill="#a97bff"/>
-<text x="386.0" y="264.0" font-size="10" class="f-dim">Kotlin 2.7k</text>
-<circle cx="475.5" cy="260.5" r="3.2" fill="#3572a5"/>
-<text x="485.0" y="264.0" font-size="10" class="f-dim">Python 323</text>
+<text x="35.0" y="264.0" font-size="10" class="f-dim">TypeScript 240.3k</text>
+<circle cx="160.5" cy="260.5" r="3.2" fill="#b07219"/>
+<text x="170.0" y="264.0" font-size="10" class="f-dim">Java 32.7k</text>
+<circle cx="253.5" cy="260.5" r="3.2" fill="#f1e05a"/>
+<text x="263.0" y="264.0" font-size="10" class="f-dim">JavaScript 24.2k</text>
+<circle cx="382.5" cy="260.5" r="3.2" fill="#a97bff"/>
+<text x="392.0" y="264.0" font-size="10" class="f-dim">Kotlin 2.8k</text>
+<circle cx="481.5" cy="260.5" r="3.2" fill="#e34c26"/>
+<text x="491.0" y="264.0" font-size="10" class="f-dim">HTML 1.9k</text>
 <circle cx="568.5" cy="260.5" r="3.2" fill="#c2ccd6"/>
-<text x="578.0" y="264.0" font-size="10" class="f-dim">other 107</text>
+<text x="578.0" y="264.0" font-size="10" class="f-dim">other 2.6k</text>
 <text x="22.0" y="304.0" font-size="9" class="f-dim" letter-spacing="1.8">DRIVE BAYS</text>
 <text x="722.0" y="304.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">LINES</text>
 <text x="818.0" y="304.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">STATUS</text>
@@ -149,7 +149,7 @@ line {stroke-width: 1;}
 <text x="722.0" y="402.0" font-size="11" class="fg" text-anchor="end">—</text>
 <text x="818.0" y="402.0" font-size="11" class="f-dim" text-anchor="end">live</text>
 <line x1="22.0" y1="424.0" x2="818.0" y2="424.0" class="s-edge"/>
-<text x="22.0" y="442.0" font-size="10" class="f-dim">2,720 commits · 8 repos · 10 years</text>
+<text x="22.0" y="442.0" font-size="10" class="f-dim">2,720 commits · 18 repos · 10 years</text>
 <text x="818.0" y="442.0" font-size="10" class="f-dim" text-anchor="end">ishank.dev  ·  in/ishankg  ·  ishank1995@gmail.com</text>
-<!--readings {"additions": 304757, "attributed": 155252, "bays": [{"label": "panchang-ts", "loc": 99850, "note": "ephemeris core", "stack": "TypeScript", "status": "npm"}, {"label": "dharmagya", "loc": 46385, "note": "ios \u00b7 android", "stack": "React Native", "status": "app store"}, {"label": "transmute", "loc": 8630, "note": "browser only", "stack": "WebAssembly", "status": "live"}, {"label": "onstage", "loc": 0, "note": "store assets", "stack": "Canvas", "status": "live"}], "commits": 2720, "contributed": 0, "deletions": 94878, "followers": 5, "lang_count": 10, "lang_other": 107, "langs": [["TypeScript", 97732], ["Java", 32679], ["JavaScript", 21664], ["Kotlin", 2748], ["Python", 323]], "npm_labels": ["2026-03-19", "2026-03-26", "2026-04-02", "2026-04-09", "2026-04-16", "2026-04-23", "2026-04-30", "2026-05-07", "2026-05-14", "2026-05-21", "2026-05-28", "2026-06-04", "2026-06-11", "2026-06-18", "2026-06-25", "2026-07-02", "2026-07-09", "2026-07-16", "2026-07-23", "2026-07-30", "2026-08-06", "2026-08-13"], "npm_packages": ["panchang-ts"], "npm_total": 8898, "npm_trimmed": true, "npm_weeks": [331, 860, 432, 250, 448, 55, 501, 528, 116, 116, 576, 166, 98, 136, 174, 145, 67, 379, 497, 1294, 1259, 397], "repos": 8, "shipped": 4, "stamp": "2026-08-22 05:10 UTC", "stars": 1, "uptime_d": 221, "uptime_y": 10} -->
+<!--readings {"additions": 304757, "attributed": 304459, "bays": [{"label": "panchang-ts", "loc": 99850, "note": "ephemeris core", "stack": "TypeScript", "status": "npm"}, {"label": "dharmagya", "loc": 46385, "note": "ios \u00b7 android", "stack": "React Native", "status": "app store"}, {"label": "transmute", "loc": 8630, "note": "browser only", "stack": "WebAssembly", "status": "live"}, {"label": "onstage", "loc": 0, "note": "store assets", "stack": "Canvas", "status": "live"}], "commits": 2720, "deletions": 94878, "lang_other": 2569, "langs": [["TypeScript", 240328], ["Java", 32679], ["JavaScript", 24185], ["Kotlin", 2804], ["HTML", 1894]], "npm_packages": ["panchang-ts"], "npm_total": 8898, "npm_weeks": [331, 860, 432, 250, 448, 55, 501, 528, 116, 116, 576, 166, 98, 136, 174, 145, 67, 379, 497, 1294, 1259, 397], "repos": 18, "shipped": 4, "stamp": "2026-08-22 05:28 UTC", "uptime_d": 221, "uptime_y": 10} -->
 </svg>

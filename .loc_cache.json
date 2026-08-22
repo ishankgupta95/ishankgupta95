@@ -2,45 +2,76 @@
  "ishankgupta95/Frontend-Interview-Prep-Master-Checklist": {
   "additions": 298,
   "deletions": 75,
-  "head": "52ab1b96ce37f0105ee84020de9b2e6151408a71"
+  "head": "52ab1b96ce37f0105ee84020de9b2e6151408a71",
+  "languages": {}
  },
  "ishankgupta95/OnStage": {
   "additions": 0,
   "deletions": 0,
-  "head": null
+  "head": null,
+  "languages": {
+   "CSS": 5693,
+   "JavaScript": 625,
+   "TypeScript": 420071
+  }
  },
  "ishankgupta95/Wattnik": {
   "additions": 0,
   "deletions": 0,
-  "head": null
+  "head": null,
+  "languages": {
+   "Shell": 5519,
+   "Swift": 11321
+  }
  },
  "ishankgupta95/dharmagya": {
   "additions": 46385,
   "deletions": 10108,
-  "head": "781b81a5762589bd067019cf019e3653636d7265"
+  "head": "781b81a5762589bd067019cf019e3653636d7265",
+  "languages": {
+   "HTML": 73922,
+   "JavaScript": 43830,
+   "Kotlin": 2223,
+   "Shell": 2024,
+   "TypeScript": 1691969
+  }
  },
  "ishankgupta95/dharmagya-website": {
   "additions": 59668,
   "deletions": 17681,
-  "head": "df20daada780f9e696ce11eb95e1eb41730ce212"
+  "head": "df20daada780f9e696ce11eb95e1eb41730ce212",
+  "languages": {
+   "CSS": 47630,
+   "JavaScript": 29334,
+   "TypeScript": 2056242
+  }
  },
  "ishankgupta95/hindu-devotional-texts": {
   "additions": 20945,
   "deletions": 1668,
-  "head": "e4dce51ad86cec8c9a1f5f1572b6d8c51596c73b"
+  "head": "e4dce51ad86cec8c9a1f5f1572b6d8c51596c73b",
+  "languages": {
+   "JavaScript": 164427,
+   "TypeScript": 6737660
+  }
  },
  "ishankgupta95/ishankgupta95": {
   "additions": 323,
   "deletions": 233,
   "head": "4b492130882f0158f5581482181a68d00376db60",
   "languages": {
-   "Python": 16085
+   "Python": 34846
   }
  },
  "ishankgupta95/life-skill-co": {
   "additions": 13578,
   "deletions": 0,
-  "head": "02674d4ffcd5123cebe12e2e87c33dcf82f1737d"
+  "head": "02674d4ffcd5123cebe12e2e87c33dcf82f1737d",
+  "languages": {
+   "CSS": 1454,
+   "JavaScript": 1098,
+   "TypeScript": 195322
+  }
  },
  "ishankgupta95/nic": {
   "additions": 22294,
@@ -81,7 +112,13 @@
  "ishankgupta95/portfolio-website": {
   "additions": 1,
   "deletions": 74,
-  "head": "0a43cb5aab2c32abc4b1dd465e23020c469cdf6c"
+  "head": "0a43cb5aab2c32abc4b1dd465e23020c469cdf6c",
+  "languages": {
+   "CSS": 40619,
+   "HTML": 669,
+   "JavaScript": 616,
+   "TypeScript": 119664
+  }
  },
  "ishankgupta95/react-drills": {
   "additions": 0,
@@ -115,11 +152,22 @@
  "ishankgupta95/transmute": {
   "additions": 8630,
   "deletions": 1585,
-  "head": "7863f3d8462038568a075c6603821b293e0e6fb8"
+  "head": "7863f3d8462038568a075c6603821b293e0e6fb8",
+  "languages": {
+   "CSS": 1893,
+   "JavaScript": 706,
+   "MDX": 89105,
+   "TypeScript": 1101213
+  }
  },
  "ishankgupta95/transmute-deprecated": {
   "additions": 0,
   "deletions": 0,
-  "head": null
+  "head": null,
+  "languages": {
+   "CSS": 204,
+   "JavaScript": 2256,
+   "TypeScript": 186909
+  }
  }
 }
