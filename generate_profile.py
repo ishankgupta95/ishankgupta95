@@ -1,17 +1,4 @@
 #!/usr/bin/env python3
-"""Renders light_mode.svg and dark_mode.svg for the profile README.
-
-The panel is drawn as an instrument readout: three live gauges, a 52-week
-activity trace, and one row per project ("drive bay") carrying that repo's
-real line count and last-write time. Every number on it is measured, not
-decorative -- see DERIVE for exactly how each one is defined.
-
-Run with a token for the full set; without one it degrades to public REST
-counts, and if the network fails entirely it re-reads the numbers already
-baked into dark_mode.svg so a bad morning leaves stale-but-true output.
-
-    GITHUB_TOKEN=ghp_... python3 generate_profile.py
-"""
 
 import json
 import os
@@ -29,14 +16,7 @@ USERNAME = "ishankgupta95"
 NAME = "ISHANK GUPTA"
 NODE = "pune-01"
 ROLE = "PROJECT LEAD @ PERSISTENT"
-# Only used if the API can't tell us when the account was opened; UPTIME is
-# otherwise measured from the real createdAt.
 FALLBACK_SINCE = datetime(2016, 1, 15, tzinfo=timezone.utc)
-
-# Drive bays, top to bottom. `slug` keys into the LOC cache and the live repo
-# list. `stack` is declared here rather than read from the API because three of
-# these repos are private -- an unauthenticated run would otherwise blank the
-# column out.
 BAYS = [
     {"label": "panchang-ts", "slug": "ishankgupta95/panchang-ts",
      "stack": "TypeScript", "note": "ephemeris core", "status": "npm"},
@@ -48,15 +28,11 @@ BAYS = [
      "stack": "Canvas", "note": "store assets", "status": "live"},
 ]
 
-# Published packages whose install counts stand for reach. npm's download API
-# is public, so this is the one reading that never needs a token.
 NPM_PACKAGES = ["panchang-ts"]
 PLATFORMS = "npm · ios · android · web"
 
 LINKS = "ishank.dev  ·  in/ishankg  ·  ishank1995@gmail.com"
 
-# Chip colours for both stacks and languages. Anything unlisted gets a stable
-# generated hue, so a new language never collides with an existing one.
 CHIP_COLORS = {
     "TypeScript": "#3178c6", "JavaScript": "#f1e05a", "Go": "#00add8",
     "Rust": "#dea584", "Python": "#3572a5", "Java": "#b07219",
@@ -210,7 +186,6 @@ def fetch_authenticated(token):
 
     now = datetime.now(timezone.utc)
 
-    # Lifetime commits, one contributionsCollection window per year.
     commits = 0
     for year in range(int(created_at[:4]), now.year + 1):
         frm = f"{year}-01-01T00:00:00Z"
@@ -229,7 +204,6 @@ def fetch_authenticated(token):
 
 
 def fetch_loc(repos, user_id, token):
-    """Sum additions/deletions across owned repos, resuming from cache."""
     try:
         with open(CACHE_FILE) as f:
             cache = json.load(f)
@@ -281,8 +255,6 @@ def fetch_loc(repos, user_id, token):
             "head": new_head or seen_head,
             "additions": entry["additions"] + new_add,
             "deletions": entry["deletions"] + new_del,
-            # Kept per repo so private repos still count toward the language
-            # mix on runs that can't see them.
             "languages": {e["node"]["name"]: e["size"]
                           for e in (repo.get("languages") or {}).get("edges") or []}
                          or entry.get("languages", {}),
@@ -295,8 +267,6 @@ def fetch_loc(repos, user_id, token):
 
 
 def fetch_npm(packages):
-    """Weekly install counts for the published packages, summed. Runs on its
-    own request path so a GitHub outage never costs us this reading."""
     daily = {}
     for package in packages:
         req = urllib.request.Request(
@@ -315,9 +285,6 @@ def fetch_npm(packages):
     starts = range(0, max(len(series) - 6, 0), 7)
     weeks = [sum(v for _, v in series[i:i + 7]) for i in starts]
 
-    # Drop the flat stretch before the first release: those weeks are zero
-    # because the package didn't exist yet, and showing them reads as a lull.
-    # The total stays a true 12-month figure -- only the plotted window moves.
     first = next((i for i, v in enumerate(weeks) if v), 0)
     return {"weeks": weeks[first:], "total": sum(daily.values())}
 
@@ -334,8 +301,6 @@ def fetch_public():
         if len(batch) < 100:
             break
         page += 1
-    # Refresh language bytes for whatever is public; cached entries for the
-    # private repos survive untouched.
     cache = load_cache()
     for name in names:
         try:
@@ -361,18 +326,10 @@ def fetch_public():
 # Fallbacks — where readings come from when the API can't answer.
 # ───────────────────────────────────────────────────────────────────────
 
-# Readings the unauthenticated REST path simply cannot measure: commit history
-# and the contribution calendar both need a token. Rather than print zeroes for
-# them, carry the last real value forward.
-# Readings no offline source can reconstruct. The language mix and the drive
-# bays are deliberately absent: cache_readings() rebuilds those from disk.
 STALE_OK = ("commits", "additions", "deletions", "npm_weeks", "npm_total")
 
 
 def previous_readings():
-    """Re-read the readings already baked into dark_mode.svg, so a failed
-    fetch degrades to stale-but-real rather than a panel full of zeroes.
-    Also understands the older <!--stats--> block this panel replaced."""
     try:
         with open(os.path.join(HERE, "dark_mode.svg")) as f:
             svg = f.read()
@@ -386,7 +343,6 @@ def previous_readings():
 
 
 def backfill(readings, prev):
-    """Fill in only the readings this run could not measure at all."""
     for key in STALE_OK:
         if not readings.get(key) and prev.get(key):
             readings[key] = prev[key]
@@ -394,8 +350,6 @@ def backfill(readings, prev):
 
 
 def normalize(readings):
-    """Guarantee every key the renderer reads, so a fallback to an older or
-    partial readings block still draws a complete panel."""
     now = datetime.now(timezone.utc)
     uptime = now - FALLBACK_SINCE
     defaults = {
@@ -426,8 +380,6 @@ def load_cache():
 
 
 def cache_readings():
-    """Everything the on-disk LOC cache can answer by itself. No network is
-    involved, so these stay correct even on a run where every fetch failed."""
     cache = load_cache()
     langs, lang_other, attributed = language_lines(cache)
     return {
@@ -441,19 +393,6 @@ def cache_readings():
 
 
 def language_lines(cache, top=5):
-    """Split each repo's authored additions across the languages that repo is
-    written in, weighted by its byte composition, and total by language.
-
-    This is an estimate and nothing else will do: GitHub reports which lines a
-    commit touched, not which language they were in. Repos whose composition
-    we've never seen contribute nothing, so the panel reports how much of the
-    line count it actually managed to attribute rather than implying it's all
-    accounted for.
-
-    The top `top` languages are named and everything below them rolls into
-    "other". Small entries are fine to name because the legend prints the exact
-    line count beside each one, so a few hundred lines reads as a few hundred
-    lines rather than as a claim of fluency."""
     totals = {}
     attributed = 0
     for entry in cache.values():
@@ -473,18 +412,8 @@ def language_lines(cache, top=5):
 
 
 def derive(raw):
-    """Every reading on the panel, with its definition stated once, here.
-
-    Nothing in here measures how often he shows up. Cadence readings (commits
-    per day, load against a personal peak, streaks) punish someone who has a
-    day job and builds in bursts -- they'd dip in the very week an App Store
-    release went out, because releases don't come with daily commits. What the
-    panel reports instead is what exists because of the work: lines written,
-    what they're written in, what shipped, and whether anyone uses it.
-    """
     now = datetime.now(timezone.utc)
 
-    # UPTIME is the age of the account, which is what "node uptime" should mean.
     since = datetime.fromisoformat(
         (raw.get("created_at") or FALLBACK_SINCE.isoformat()).replace("Z", "+00:00"))
     uptime = now - since
@@ -556,7 +485,6 @@ def draw_header(r, t):
     out.append(txt(PAD, 27, NAME, size=17, weight=600, track=2.4))
     out.append(txt(PAD, 43, ROLE, size=9, fill="f-dim", track=1.6))
 
-    # Right-hand status cluster, laid out right-to-left.
     x = W - PAD
     out.append(txt(x, 40, "ONLINE", size=9, fill="f-ok", anchor="end", track=1.4))
     out.append(f'<circle cx="{x - 45:.1f}" cy="{36.5}" r="3" class="f-ok" '
@@ -583,7 +511,6 @@ def draw_card(x, label, value, unit, note, meter, t):
     out.append(txt(x + 14, y + 20, label, size=9, fill="f-dim", track=1.8))
     out.append(txt(x + 14, y + 52, value, size=27, weight=600))
     if unit:
-        # Advance of the 27px monospace reading, then the unit beside it.
         out.append(txt(x + len(value) * 16.2 + 20, y + 52, unit, size=10,
                        fill="f-dim"))
 
@@ -614,7 +541,6 @@ def draw_cards(r, t):
     """Three totals. Each only grows, so a quiet month never reads as decline."""
     out = []
 
-    # How much survived: written against erased, in proportion.
     written, erased = r["additions"], r["deletions"]
     out += draw_card(PAD, "LINES WRITTEN", comma(written), "",
                      f"−{comma(erased)} erased · {r['repos']} repos",
@@ -626,8 +552,6 @@ def draw_cards(r, t):
                      f"{packages} · last 12 months",
                      ("hist", r["npm_weeks"][-CELLS:]), t)
 
-    # One equal segment per project, coloured like its drive bay -- this card
-    # is a count, so sizing by lines would hide the smaller ones entirely.
     mix = [(1, chip_color(bay["stack"])) for bay in r["bays"]]
     out += draw_card(PAD + 2 * (GAUGE_W + GAUGE_GAP), "SHIPPED",
                      str(r["shipped"]), "projects", PLATFORMS, ("mix", mix), t)
@@ -645,11 +569,12 @@ def draw_langs(r, t):
         out.append(txt(x0, LANGS_Y + 38, "no language data", size=10, fill="f-dim"))
         return out
 
-    # Say plainly how much of the line count this actually accounts for --
-    # repos whose composition we've never seen are simply absent.
-    out.append(txt(x1, LANGS_Y + 12,
-                   f"{kilo(r['attributed'])} OF {kilo(r['additions'])} LINES ATTRIBUTED",
-                   size=9, fill="f-dim", anchor="end", track=1.2))
+    covered = r["attributed"] / r["additions"] if r["additions"] else 1
+    if covered < 0.95:
+        out.append(txt(x1, LANGS_Y + 12,
+                       f"{kilo(r['attributed'])} OF {kilo(r['additions'])} "
+                       f"LINES ATTRIBUTED", size=9, fill="f-dim",
+                       anchor="end", track=1.2))
 
     out.append(f'<clipPath id="langbar"><rect x="{x0}" y="{LANG_BAR_Y}" '
                f'width="{x1 - x0}" height="{LANG_BAR_H}" rx="3"/></clipPath>')
@@ -676,11 +601,7 @@ def draw_langs(r, t):
         lx += 13 + advance(label, 10) + 20
     return out
 
-
-# Right edge of the lines column, bar width, and the gutter between the
-# bar and the widest figure it can sit next to ("304.8k").
 LOC_COL, BAR_W, BAR_GAP = 96, 130, 48
-
 
 def draw_bays(r, t):
     """One row per project. Deliberately no "last write" column: these ship and
@@ -724,14 +645,10 @@ def draw_footer(r, t):
     return out
 
 def advance(text, size):
-    """Width of a monospace run. Every face in FONT sits at 0.6em."""
     return len(text) * size * 0.6
 
 
 def check_fit(r):
-    """A character-cell layout makes overflow obvious; anchored text just
-    silently overlaps. Check the columns that can actually collide and fail
-    loudly, rather than shipping a panel with numbers on top of each other."""
     x1 = W - PAD
     problems = []
 
@@ -812,21 +729,16 @@ def main():
         readings = derive(raw)
         if prev:
             readings = backfill(readings, prev)
-    except Exception as exc:  # network, rate limit, bad token
+    except Exception as exc:
         print(f"Fetch failed ({exc}); reusing last known readings.", file=sys.stderr)
         readings = prev
         if readings is None:
             raise SystemExit("No cached readings in dark_mode.svg to fall back on.")
-        # A failed fetch is no reason to serve a stale language mix.
         readings.update(cache_readings())
 
     readings = normalize(readings)
     check_fit(readings)
 
-    # Render both fully before touching disk. Opening for write truncates
-    # immediately, so rendering straight into the file means any error empties
-    # dark_mode.svg -- which is where previous_readings() looks, so one bad
-    # render would silently destroy the fallback for every run after it.
     pages = {name: render(name, readings) for name in ("dark", "light")}
     for name, svg in pages.items():
         path = os.path.join(HERE, f"{name}_mode.svg")
