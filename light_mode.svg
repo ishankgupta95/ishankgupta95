@@ -39,7 +39,7 @@ line {stroke-width: 1;}
 <text x="22.0" y="43.0" font-size="9" class="f-dim" letter-spacing="1.6">PROJECT LEAD @ PERSISTENT</text>
 <text x="818.0" y="40.0" font-size="9" class="f-ok" text-anchor="end" letter-spacing="1.4">ONLINE</text>
 <circle cx="773.0" cy="36.5" r="3" class="f-ok" id="led"/>
-<text x="818.0" y="24.0" font-size="11" class="fg" text-anchor="end">10y 224d</text>
+<text x="818.0" y="24.0" font-size="11" class="fg" text-anchor="end">10y 225d</text>
 <text x="740.0" y="24.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">UPTIME</text>
 <text x="740.0" y="40.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">node pune-01</text>
 <rect x="22.0" y="78.0" width="256.0" height="106.0" class="f-panel" stroke="#d9e0e8" rx="6"/>
@@ -50,32 +50,32 @@ line {stroke-width: 1;}
 <text x="36.0" y="171.0" font-size="9" class="f-dim">−94,878 erased · 18 repos</text>
 <rect x="292.0" y="78.0" width="256.0" height="106.0" class="f-panel" stroke="#d9e0e8" rx="6"/>
 <text x="306.0" y="98.0" font-size="9" class="f-dim" letter-spacing="1.8">NPM INSTALLS</text>
-<text x="306.0" y="130.0" font-size="27" class="fg" font-weight="600">9,329</text>
+<text x="306.0" y="130.0" font-size="27" class="fg" font-weight="600">9,379</text>
 <text x="393.0" y="130.0" font-size="10" class="f-dim">/yr</text>
 <rect x="306.0" y="151.0" width="6.6" height="2.0" class="f-faint" opacity="0.55"/>
 <rect x="315.6" y="151.0" width="6.6" height="2.0" class="f-faint" opacity="0.55"/>
-<rect x="325.2" y="149.1" width="6.6" height="3.9" class="f-accent"/>
-<rect x="334.9" y="141.5" width="6.6" height="11.5" class="f-accent"/>
-<rect x="344.5" y="150.3" width="6.6" height="2.7" class="f-accent"/>
-<rect x="354.1" y="150.7" width="6.6" height="2.3" class="f-accent"/>
-<rect x="363.8" y="148.2" width="6.6" height="4.8" class="f-accent"/>
+<rect x="325.2" y="147.3" width="6.6" height="5.7" class="f-accent"/>
+<rect x="334.9" y="140.9" width="6.6" height="12.1" class="f-accent"/>
+<rect x="344.5" y="149.7" width="6.6" height="3.3" class="f-accent"/>
+<rect x="354.1" y="146.4" width="6.6" height="6.6" class="f-accent"/>
+<rect x="363.8" y="151.0" width="6.6" height="2.0" class="f-accent"/>
 <rect x="373.4" y="151.0" width="6.6" height="2.0" class="f-accent"/>
-<rect x="383.0" y="146.7" width="6.6" height="6.3" class="f-accent"/>
-<rect x="392.6" y="149.3" width="6.6" height="3.7" class="f-accent"/>
+<rect x="383.0" y="145.7" width="6.6" height="7.3" class="f-accent"/>
+<rect x="392.6" y="148.8" width="6.6" height="4.2" class="f-accent"/>
 <rect x="402.2" y="151.0" width="6.6" height="2.0" class="f-accent"/>
-<rect x="411.9" y="150.0" width="6.6" height="3.0" class="f-accent"/>
-<rect x="421.5" y="147.9" width="6.6" height="5.1" class="f-accent"/>
+<rect x="411.9" y="147.1" width="6.6" height="5.9" class="f-accent"/>
+<rect x="421.5" y="149.5" width="6.6" height="3.5" class="f-accent"/>
 <rect x="431.1" y="151.0" width="6.6" height="2.0" class="f-accent"/>
 <rect x="440.8" y="151.0" width="6.6" height="2.0" class="f-accent"/>
 <rect x="450.4" y="151.0" width="6.6" height="2.0" class="f-accent"/>
 <rect x="460.0" y="151.0" width="6.6" height="2.0" class="f-accent"/>
 <rect x="469.6" y="151.0" width="6.6" height="2.0" class="f-accent"/>
-<rect x="479.2" y="151.0" width="6.6" height="2.0" class="f-accent"/>
-<rect x="488.9" y="146.8" width="6.6" height="6.2" class="f-accent"/>
-<rect x="498.5" y="143.5" width="6.6" height="9.5" class="f-accent"/>
-<rect x="508.1" y="144.0" width="6.6" height="9.0" class="f-accent"/>
-<rect x="517.8" y="140.0" width="6.6" height="13.0" class="f-accent"/>
-<rect x="527.4" y="147.1" width="6.6" height="5.9" class="f-accent"/>
+<rect x="479.2" y="150.0" width="6.6" height="3.0" class="f-accent"/>
+<rect x="488.9" y="146.5" width="6.6" height="6.5" class="f-accent"/>
+<rect x="498.5" y="140.1" width="6.6" height="12.9" class="f-accent"/>
+<rect x="508.1" y="140.0" width="6.6" height="13.0" class="f-accent"/>
+<rect x="517.8" y="142.3" width="6.6" height="10.7" class="f-accent"/>
+<rect x="527.4" y="145.3" width="6.6" height="7.7" class="f-accent"/>
 <text x="306.0" y="171.0" font-size="9" class="f-dim">panchang-ts · last 12 months</text>
 <rect x="562.0" y="78.0" width="256.0" height="106.0" class="f-panel" stroke="#d9e0e8" rx="6"/>
 <text x="576.0" y="98.0" font-size="9" class="f-dim" letter-spacing="1.8">SHIPPED</text>
@@ -150,5 +150,5 @@ line {stroke-width: 1;}
 <line x1="22.0" y1="424.0" x2="818.0" y2="424.0" class="s-edge"/>
 <text x="22.0" y="442.0" font-size="10" class="f-dim">2,443 commits · 18 repos · 10 years</text>
 <text x="818.0" y="442.0" font-size="10" class="f-dim" text-anchor="end">ishank.dev  ·  in/ishankg  ·  ishank1995@gmail.com</text>
-<!--readings {"additions": 304757, "attributed": 304459, "bays": [{"label": "panchang-ts", "loc": 99850, "note": "ephemeris core", "stack": "TypeScript", "status": "npm"}, {"label": "dharmagya", "loc": 46385, "note": "ios \u00b7 android", "stack": "React Native", "status": "app store"}, {"label": "transmute", "loc": 8630, "note": "browser only", "stack": "WebAssembly", "status": "live"}, {"label": "onstage", "loc": 0, "note": "store assets", "stack": "Canvas", "status": "live"}], "commits": 2443, "deletions": 94878, "lang_other": 2569, "langs": [["TypeScript", 240328], ["Java", 32679], ["JavaScript", 24185], ["Kotlin", 2804], ["HTML", 1894]], "npm_packages": ["panchang-ts"], "npm_total": 9329, "npm_weeks": [363, 1071, 252, 215, 447, 156, 591, 343, 130, 276, 473, 92, 146, 145, 167, 99, 188, 582, 886, 836, 1213, 554], "repos": 18, "shipped": 4, "stamp": "2026-08-25 04:14 UTC", "uptime_d": 224, "uptime_y": 10} -->
+<!--readings {"additions": 304757, "attributed": 304459, "bays": [{"label": "panchang-ts", "loc": 99850, "note": "ephemeris core", "stack": "TypeScript", "status": "npm"}, {"label": "dharmagya", "loc": 46385, "note": "ios \u00b7 android", "stack": "React Native", "status": "app store"}, {"label": "transmute", "loc": 8630, "note": "browser only", "stack": "WebAssembly", "status": "live"}, {"label": "onstage", "loc": 0, "note": "store assets", "stack": "Canvas", "status": "live"}], "commits": 2443, "deletions": 94878, "lang_other": 2569, "langs": [["TypeScript", 240328], ["Java", 32679], ["JavaScript", 24185], ["Kotlin", 2804], ["HTML", 1894]], "npm_packages": ["panchang-ts"], "npm_total": 9379, "npm_weeks": [463, 982, 268, 538, 102, 159, 593, 342, 126, 476, 285, 90, 149, 151, 163, 79, 241, 529, 1048, 1053, 869, 623], "repos": 18, "shipped": 4, "stamp": "2026-08-26 04:15 UTC", "uptime_d": 225, "uptime_y": 10} -->
 </svg>
