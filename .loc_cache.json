@@ -95,8 +95,19 @@
   "deletions": 0,
   "head": null,
   "languages": {
-   "Go": 7162,
+   "Go": 9928,
    "Makefile": 164
+  }
+ },
+ "ishankgupta95/panchang": {
+  "additions": 1143458,
+  "deletions": 87107,
+  "head": "5006648ba8b2eaee691729198f1bb25d0d141e7a",
+  "languages": {
+   "Go": 1890182,
+   "JavaScript": 77919,
+   "Shell": 13292,
+   "TypeScript": 2114040
   }
  },
  "ishankgupta95/panchang-ts": {
