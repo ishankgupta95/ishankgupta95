@@ -1,16 +1,14 @@
 {
  "ishankgupta95/Frontend-Interview-Prep-Master-Checklist": {
   "additions": 298,
-  "author_mode": "id",
   "deletions": 75,
   "head": "52ab1b96ce37f0105ee84020de9b2e6151408a71",
   "id": "R_kgDORQ-WYA",
   "languages": {},
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/OnStage": {
   "additions": 31592,
-  "author_mode": "commits",
   "deletions": 10235,
   "head": "857b9fe3965828ab980fe7cedb75ba4be85f7f94",
   "id": "R_kgDOSlnCqQ",
@@ -19,11 +17,10 @@
    "JavaScript": 625,
    "TypeScript": 420071
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/Wattnik": {
   "additions": 3805,
-  "author_mode": "commits",
   "deletions": 135,
   "head": "88647d079fdf35bb2de0af5153a39094b9b7e21e",
   "id": "R_kgDOSgjB5w",
@@ -31,13 +28,12 @@
    "Shell": 5519,
    "Swift": 11321
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/dharmagya": {
-  "additions": 46385,
-  "author_mode": "id",
-  "deletions": 10108,
-  "head": "781b81a5762589bd067019cf019e3653636d7265",
+  "additions": 181352,
+  "deletions": 45217,
+  "head": "5a9e8dba14d49eadaa4b9f8332838e883bfbf73f",
   "id": "R_kgDORoPBGw",
   "languages": {
    "HTML": 73922,
@@ -46,60 +42,55 @@
    "Shell": 2024,
    "TypeScript": 1691969
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/dharmagya-website": {
-  "additions": 59668,
-  "author_mode": "id",
-  "deletions": 17681,
-  "head": "df20daada780f9e696ce11eb95e1eb41730ce212",
+  "additions": 159336,
+  "deletions": 58140,
+  "head": "3dd1530f8bac985e079a0f0fd1faaa977aa9eafe",
   "id": "R_kgDORwzlMQ",
   "languages": {
    "CSS": 47630,
    "JavaScript": 29334,
    "TypeScript": 2056242
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/hindu-devotional-texts": {
-  "additions": 20945,
-  "author_mode": "id",
-  "deletions": 1668,
-  "head": "e4dce51ad86cec8c9a1f5f1572b6d8c51596c73b",
+  "additions": 60887,
+  "deletions": 11436,
+  "head": "7da9765b2718cdac7cdc45f1f7664a5749b288fe",
   "id": "R_kgDOSDrFFg",
   "languages": {
    "JavaScript": 164427,
    "TypeScript": 6737660
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/ishankgupta95": {
-  "additions": 486,
-  "author_mode": "id",
-  "deletions": 282,
-  "head": "38de550dfdcbe8125e99a731154b9dbc7bfb4bb8",
+  "additions": 2058,
+  "deletions": 766,
+  "head": "07634d82058afd821f987d989ef5e03f15018c66",
   "id": "R_kgDOO79shA",
   "languages": {
    "Python": 34947
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/life-skill-co": {
-  "additions": 13578,
-  "author_mode": "id",
-  "deletions": 0,
-  "head": "02674d4ffcd5123cebe12e2e87c33dcf82f1737d",
+  "additions": 15540,
+  "deletions": 298,
+  "head": "a87951d2f9de1e4650261a2d934f511aa57c04e6",
   "id": "R_kgDOSpKqsQ",
   "languages": {
    "CSS": 1454,
    "JavaScript": 1098,
    "TypeScript": 195322
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/nic": {
   "additions": 22294,
-  "author_mode": "id",
   "deletions": 1735,
   "head": "41cd56a031781b7e050351887c5a3f09c686b9a6",
   "id": "R_kgDOL7B7Qg",
@@ -107,22 +98,20 @@
    "JavaScript": 29823,
    "Kotlin": 4192
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/nic-android-native": {
   "additions": 32679,
-  "author_mode": "id",
   "deletions": 17503,
   "head": "a3ec584fe198962a6378d742d2e19bc763c0c700",
   "id": "R_kgDOHc3QOg",
   "languages": {
    "Java": 377474
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/olx-api": {
   "additions": 696,
-  "author_mode": "commits",
   "deletions": 114,
   "head": "cd03a1dd323226676c3d03dc0c264b25954e71f3",
   "id": "R_kgDOT6DSkw",
@@ -130,13 +119,12 @@
    "Go": 9928,
    "Makefile": 164
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/panchang": {
-  "additions": 1143458,
-  "author_mode": "id",
-  "deletions": 87107,
-  "head": "5006648ba8b2eaee691729198f1bb25d0d141e7a",
+  "additions": 2382538,
+  "deletions": 198099,
+  "head": "f0924c79fec4d3f540052f583ca5b40f6390d4b4",
   "id": "R_kgDORuJnKQ",
   "languages": {
    "Go": 1890182,
@@ -144,13 +132,12 @@
    "Shell": 13292,
    "TypeScript": 2114040
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/portfolio-website": {
-  "additions": 1,
-  "author_mode": "id",
-  "deletions": 74,
-  "head": "0a43cb5aab2c32abc4b1dd465e23020c469cdf6c",
+  "additions": 13293,
+  "deletions": 3831,
+  "head": "a84883ea277ce1b3a795e5e195a1a7eef65ee89a",
   "id": "R_kgDORjGZgQ",
   "languages": {
    "CSS": 40883,
@@ -158,11 +145,10 @@
    "JavaScript": 3963,
    "TypeScript": 98516
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/react-drills": {
   "additions": 6228,
-  "author_mode": "commits",
   "deletions": 0,
   "head": "b376542c0e77e912e1836367bc55e86ee129946e",
   "id": "R_kgDOTFCTvg",
@@ -171,24 +157,22 @@
    "HTML": 667,
    "JavaScript": 111252
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/students-api": {
   "additions": 485,
-  "author_mode": "commits",
   "deletions": 16,
   "head": "02efc7504c7262fa31c4f39f2331db43bf8917b9",
   "id": "R_kgDOT2EsGQ",
   "languages": {
    "Go": 8232
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/tier_list": {
-  "additions": 106,
-  "author_mode": "id",
-  "deletions": 75,
-  "head": "da4c87f476d86b47944c34b93d36a90c5ef16340",
+  "additions": 5658,
+  "deletions": 3377,
+  "head": "a1fc5833c2da6b54b83b0284d8d75827da1cb200",
   "id": "R_kgDONrmQJA",
   "languages": {
    "CSS": 4380,
@@ -196,12 +180,11 @@
    "JavaScript": 734,
    "TypeScript": 6073
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/transmute": {
-  "additions": 38582,
-  "author_mode": "id",
-  "deletions": 9302,
+  "additions": 115932,
+  "deletions": 23444,
   "head": "3de521a77b7a801d68ed5cbbc987297e9ffed84c",
   "id": "R_kgDOR7BEhg",
   "languages": {
@@ -210,11 +193,10 @@
    "MDX": 89105,
    "TypeScript": 1860046
   },
-  "v": 2
+  "v": 3
  },
  "ishankgupta95/transmute-deprecated": {
   "additions": 18900,
-  "author_mode": "commits",
   "deletions": 977,
   "head": "8b0eef56809815b5b41dbf4ae022ba3c386a856b",
   "id": "R_kgDORobZdA",
@@ -223,6 +205,6 @@
    "JavaScript": 2256,
    "TypeScript": 186909
   },
-  "v": 2
+  "v": 3
  }
 }
