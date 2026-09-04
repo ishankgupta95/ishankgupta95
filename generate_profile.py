@@ -17,14 +17,17 @@ NAME = "ISHANK GUPTA"
 NODE = "pune-01"
 ROLE = "PROJECT LEAD @ PERSISTENT"
 FALLBACK_SINCE = datetime(2016, 1, 15, tzinfo=timezone.utc)
+# `slugs` is a list because one shipped thing is not always one repo — dharmagya
+# is an app and a website, and the row should read as the whole product.
 BAYS = [
-    {"label": "panchang", "slug": "ishankgupta95/panchang",
+    {"label": "panchang", "slugs": ["ishankgupta95/panchang"],
      "stack": "TypeScript", "note": "Go · ephemeris core", "status": "npm"},
-    {"label": "dharmagya", "slug": "ishankgupta95/dharmagya",
-     "stack": "React Native", "note": "ios · android", "status": "app store"},
-    {"label": "transmute", "slug": "ishankgupta95/transmute",
+    {"label": "dharmagya", "stack": "React Native", "status": "app store",
+     "slugs": ["ishankgupta95/dharmagya", "ishankgupta95/dharmagya-website"],
+     "note": "ios · android · web"},
+    {"label": "transmute", "slugs": ["ishankgupta95/transmute"],
      "stack": "WebAssembly", "note": "browser only", "status": "live"},
-    {"label": "onstage", "slug": "ishankgupta95/OnStage",
+    {"label": "onstage", "slugs": ["ishankgupta95/OnStage"],
      "stack": "Canvas", "note": "store assets", "status": "live"},
 ]
 
@@ -96,10 +99,13 @@ THEMES = {
 CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".loc_cache.json")
 
 # Bumping this re-walks every repo from its root once, repo by repo, and replaces
-# the cached totals. Bump it whenever a bug could have left the counts wrong: the
-# old walk banked a head even when the API cut it short, so anything counted
-# before v2 may be missing the commits that walk never reached.
-CACHE_VERSION = 2
+# the cached totals. Bump it whenever a bug could have left the counts wrong:
+#   v2 — the old walk banked a head even when the API cut it short, so anything
+#        counted before it may be missing the commits that walk never reached.
+#   v3 — attribution ran through GitHub's author filter, which sees only commits
+#        whose email is linked to the account. That silently dropped ~82% of the
+#        work in repos where *some* commits were linked and most were not.
+CACHE_VERSION = 3
 HERE = os.path.dirname(os.path.abspath(__file__))
 API = "https://api.github.com/graphql"
 
@@ -153,14 +159,16 @@ query($login: String!, $cursor: String) {
 }
 """
 
+# No `author:` filter. It only matches commits GitHub has linked to the account,
+# and most of these were authored from an address that never was — see
+# AUTHOR_EMAILS. Attribution happens in `_own_commit` instead.
 HISTORY_QUERY = """
-query($owner: String!, $name: String!, $branch: String!,
-      $author: CommitAuthor, $cursor: String) {
+query($owner: String!, $name: String!, $branch: String!, $cursor: String) {
   repository(owner: $owner, name: $name) {
     ref(qualifiedName: $branch) {
       target {
         ... on Commit {
-          history(author: $author, first: 100, after: $cursor) {
+          history(first: 100, after: $cursor) {
             pageInfo { hasNextPage endCursor }
             nodes {
               oid additions deletions
@@ -188,12 +196,11 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 
 def fetch_authenticated(token):
     repos, cursor = [], None
-    user_id = created_at = None
+    created_at = None
     repo_total = 0
 
     while True:
         data = _post(USER_QUERY, {"login": USERNAME, "cursor": cursor}, token)["user"]
-        user_id = data["id"]
         created_at = data["createdAt"]
         block = data["repositories"]
         repo_total = block["totalCount"]
@@ -213,8 +220,7 @@ def fetch_authenticated(token):
         commits += c["totalCommitContributions"] + c["restrictedContributionsCount"]
 
     additions, deletions = fetch_loc(
-        repos, user_id, token,
-        listing_complete=bool(repos) and len(repos) == repo_total)
+        repos, token, listing_complete=bool(repos) and len(repos) == repo_total)
 
     return {
         "repos": repo_total, "commits": commits,
@@ -236,7 +242,7 @@ def _own_commit(node):
     return login in ("", USERNAME.lower())
 
 
-def _walk_history(owner, name, branch, author, token, seen_head, accept=None):
+def _walk_history(owner, name, branch, token, seen_head):
     """Walk a branch newest-first, stopping at `seen_head`.
 
     Returns (additions, deletions, tip, counted, matched, complete, emails).
@@ -249,8 +255,7 @@ def _walk_history(owner, name, branch, author, token, seen_head, accept=None):
     while True:
         try:
             data = _post(HISTORY_QUERY, {
-                "owner": owner, "name": name, "branch": branch,
-                "author": author, "cursor": cursor,
+                "owner": owner, "name": name, "branch": branch, "cursor": cursor,
             }, token)
         except (urllib.error.HTTPError, RuntimeError) as exc:
             print(f"  ! {owner}/{name}: {exc}", file=sys.stderr)
@@ -266,7 +271,7 @@ def _walk_history(owner, name, branch, author, token, seen_head, accept=None):
                 return add, dele, tip, counted, True, True, emails
             if tip is None:
                 tip = node["oid"]
-            if accept and not accept(node):
+            if not _own_commit(node):
                 continue
             emails.add((node.get("author") or {}).get("email") or "?")
             add += node["additions"]
@@ -278,7 +283,7 @@ def _walk_history(owner, name, branch, author, token, seen_head, accept=None):
         cursor = history["pageInfo"]["endCursor"]
 
 
-def fetch_loc(repos, user_id, token, listing_complete=False):
+def fetch_loc(repos, token, listing_complete=False):
     cache = load_cache()
     owned = {repo["nameWithOwner"] for repo in repos}
     live = {repo.get("id"): repo["nameWithOwner"] for repo in repos if repo.get("id")}
@@ -306,7 +311,6 @@ def fetch_loc(repos, user_id, token, listing_complete=False):
         owner, repo_name = name.split("/", 1)
         branch = branch_ref["name"]
         entry = cache.get(name) or {"head": None, "additions": 0, "deletions": 0}
-        mode = entry.get("author_mode") or "id"
         rebuilding = entry.get("v") != CACHE_VERSION
         # Start from the root, so the walk below replaces the total rather than
         # topping up one this repo's entry may never have counted in full.
@@ -314,23 +318,14 @@ def fetch_loc(repos, user_id, token, listing_complete=False):
         if rebuilding and entry.get("head"):
             print(f"  ~ {name}: recounting from the root", file=sys.stderr)
 
-        add = dele = counted = 0
-        tip = None
-        matched = complete = False
+        add, dele, tip, _, matched, complete, emails = _walk_history(
+            owner, repo_name, branch, token, seen_head)
 
-        if mode == "id":
-            add, dele, tip, counted, matched, complete, _ = _walk_history(
-                owner, repo_name, branch, {"id": user_id}, token, seen_head)
-
-        # An author-filtered history is empty when none of the commit emails are
-        # linked to the account. Walk the branch itself and keep what is ours.
-        if mode == "commits" or (complete and not matched and not counted):
-            add, dele, tip, counted, matched, complete, emails = _walk_history(
-                owner, repo_name, branch, None, token, seen_head, accept=_own_commit)
-            if counted and mode != "commits":
-                mode = "commits"
-                print(f"  ~ {name}: no commits linked to the account, attributing "
-                      f"by email instead ({', '.join(sorted(emails))})", file=sys.stderr)
+        strays = {e for e in emails if e and e not in AUTHOR_EMAILS} - {"?"}
+        if strays:
+            print(f"  ~ {name}: counted commits from unlinked "
+                  f"{', '.join(sorted(strays))} — add to AUTHOR_EMAILS if yours",
+                  file=sys.stderr)
 
         if not complete:
             # Bank nothing: a head saved here would hide every commit the walk
@@ -356,7 +351,6 @@ def fetch_loc(repos, user_id, token, listing_complete=False):
             "head": head,
             "additions": additions,
             "deletions": deletions,
-            "author_mode": mode,
             "languages": {e["node"]["name"]: e["size"]
                           for e in (repo.get("languages") or {}).get("edges") or []}
                          or entry.get("languages", {}),
@@ -489,7 +483,8 @@ def cache_readings():
         "bays": [{
             "label": bay["label"], "note": bay["note"], "stack": bay["stack"],
             "status": bay["status"],
-            "loc": cache.get(bay["slug"], {}).get("additions", 0),
+            "loc": sum(cache.get(slug, {}).get("additions", 0)
+                       for slug in bay["slugs"]),
         } for bay in BAYS],
     }
 
@@ -761,9 +756,10 @@ def check_fit(r):
 
     cache = load_cache()
     for bay in BAYS:
-        if bay["slug"] not in cache:
-            problems.append(f"no cache entry for {bay['slug']!r} — renamed, or "
-                            f"deleted? the row would silently read zero")
+        for slug in bay["slugs"]:
+            if slug not in cache:
+                problems.append(f"no cache entry for {slug!r} — renamed, or "
+                                f"deleted? the row would silently undercount")
 
     note_limit = x1 - LOC_COL - BAR_GAP - BAR_W - 12
     bar_edge = x1 - LOC_COL - BAR_GAP
