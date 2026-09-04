@@ -18,8 +18,8 @@ NODE = "pune-01"
 ROLE = "PROJECT LEAD @ PERSISTENT"
 FALLBACK_SINCE = datetime(2016, 1, 15, tzinfo=timezone.utc)
 BAYS = [
-    {"label": "panchang-ts", "slug": "ishankgupta95/panchang-ts",
-     "stack": "TypeScript", "note": "ephemeris core", "status": "npm"},
+    {"label": "panchang", "slug": "ishankgupta95/panchang",
+     "stack": "TypeScript", "note": "Go · ephemeris core", "status": "npm"},
     {"label": "dharmagya", "slug": "ishankgupta95/dharmagya",
      "stack": "React Native", "note": "ios · android", "status": "app store"},
     {"label": "transmute", "slug": "ishankgupta95/transmute",
@@ -28,7 +28,14 @@ BAYS = [
      "stack": "Canvas", "note": "store assets", "status": "live"},
 ]
 
+# The npm package kept its name when the GitHub repo was renamed to `panchang`.
 NPM_PACKAGES = ["panchang-ts"]
+
+# Commits authored from an email GitHub cannot link back to the account are
+# invisible to an author-filtered history. Anything here counts as ours.
+# `ishank195` is a typo that git config carried for years across several repos —
+# adding the address to the GitHub account would fix attribution at the source.
+AUTHOR_EMAILS = {"ishank1995@gmail.com", "ishank195@gmail.com"}
 PLATFORMS = "npm · ios · android · web"
 
 LINKS = "ishank.dev  ·  in/ishankg  ·  ishank1995@gmail.com"
@@ -87,6 +94,12 @@ THEMES = {
 }
 
 CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".loc_cache.json")
+
+# Bumping this re-walks every repo from its root once, repo by repo, and replaces
+# the cached totals. Bump it whenever a bug could have left the counts wrong: the
+# old walk banked a head even when the API cut it short, so anything counted
+# before v2 may be missing the commits that walk never reached.
+CACHE_VERSION = 2
 HERE = os.path.dirname(os.path.abspath(__file__))
 API = "https://api.github.com/graphql"
 
@@ -128,6 +141,7 @@ query($login: String!, $cursor: String) {
       totalCount
       pageInfo { hasNextPage endCursor }
       nodes {
+        id
         nameWithOwner
         defaultBranchRef { name }
         languages(first: 12, orderBy: {field: SIZE, direction: DESC}) {
@@ -140,14 +154,18 @@ query($login: String!, $cursor: String) {
 """
 
 HISTORY_QUERY = """
-query($owner: String!, $name: String!, $branch: String!, $id: ID!, $cursor: String) {
+query($owner: String!, $name: String!, $branch: String!,
+      $author: CommitAuthor, $cursor: String) {
   repository(owner: $owner, name: $name) {
     ref(qualifiedName: $branch) {
       target {
         ... on Commit {
-          history(author: {id: $id}, first: 100, after: $cursor) {
+          history(author: $author, first: 100, after: $cursor) {
             pageInfo { hasNextPage endCursor }
-            nodes { oid additions deletions }
+            nodes {
+              oid additions deletions
+              author { email user { login } }
+            }
           }
         }
       }
@@ -194,7 +212,9 @@ def fetch_authenticated(token):
         c = c["user"]["contributionsCollection"]
         commits += c["totalCommitContributions"] + c["restrictedContributionsCount"]
 
-    additions, deletions = fetch_loc(repos, user_id, token)
+    additions, deletions = fetch_loc(
+        repos, user_id, token,
+        listing_complete=bool(repos) and len(repos) == repo_total)
 
     return {
         "repos": repo_total, "commits": commits,
@@ -203,12 +223,80 @@ def fetch_authenticated(token):
     }
 
 
-def fetch_loc(repos, user_id, token):
-    try:
-        with open(CACHE_FILE) as f:
-            cache = json.load(f)
-    except (OSError, ValueError):
-        cache = {}
+def _own_commit(node):
+    """Is this commit ours? Used only on owned, non-fork repos.
+
+    A commit GitHub could not link to any account (stray `user.email` on some
+    old machine) is ours by elimination; one linked to somebody else is not.
+    """
+    author = node.get("author") or {}
+    if (author.get("email") or "").lower() in AUTHOR_EMAILS:
+        return True
+    login = ((author.get("user") or {}).get("login") or "").lower()
+    return login in ("", USERNAME.lower())
+
+
+def _walk_history(owner, name, branch, author, token, seen_head, accept=None):
+    """Walk a branch newest-first, stopping at `seen_head`.
+
+    Returns (additions, deletions, tip, counted, matched, complete, emails).
+    `complete` is False when the API cut the walk short — the caller has to
+    throw that result away rather than bank a head it never earned.
+    """
+    add = dele = counted = 0
+    tip, cursor, emails = None, None, set()
+
+    while True:
+        try:
+            data = _post(HISTORY_QUERY, {
+                "owner": owner, "name": name, "branch": branch,
+                "author": author, "cursor": cursor,
+            }, token)
+        except (urllib.error.HTTPError, RuntimeError) as exc:
+            print(f"  ! {owner}/{name}: {exc}", file=sys.stderr)
+            return add, dele, tip, counted, False, False, emails
+
+        target = (data.get("repository") or {}).get("ref") or {}
+        history = (target.get("target") or {}).get("history")
+        if not history:
+            return add, dele, tip, counted, False, False, emails
+
+        for node in history["nodes"]:
+            if node["oid"] == seen_head:
+                return add, dele, tip, counted, True, True, emails
+            if tip is None:
+                tip = node["oid"]
+            if accept and not accept(node):
+                continue
+            emails.add((node.get("author") or {}).get("email") or "?")
+            add += node["additions"]
+            dele += node["deletions"]
+            counted += 1
+
+        if not history["pageInfo"]["hasNextPage"]:
+            return add, dele, tip, counted, False, True, emails
+        cursor = history["pageInfo"]["endCursor"]
+
+
+def fetch_loc(repos, user_id, token, listing_complete=False):
+    cache = load_cache()
+    owned = {repo["nameWithOwner"] for repo in repos}
+    live = {repo.get("id"): repo["nameWithOwner"] for repo in repos if repo.get("id")}
+
+    # A rename keeps the repo's node id, so the accumulated counts can follow it
+    # across instead of restarting from an empty entry.
+    for was, entry in list(cache.items()):
+        now = live.get(entry.get("id"))
+        if now and now != was and now not in cache:
+            print(f"  ~ {was} was renamed to {now}", file=sys.stderr)
+            cache[now] = cache.pop(was)
+
+    # Whatever is left over is a rename this cache was too old to follow, or a
+    # repo that is gone. Keeping it double-counts lines against the new name.
+    if listing_complete:
+        for stale in sorted(set(cache) - owned):
+            print(f"  - dropping stale cache entry {stale}", file=sys.stderr)
+            del cache[stale]
 
     for repo in repos:
         branch_ref = repo.get("defaultBranchRef")
@@ -216,45 +304,59 @@ def fetch_loc(repos, user_id, token):
             continue
         name = repo["nameWithOwner"]
         owner, repo_name = name.split("/", 1)
-        entry = cache.get(name, {"head": None, "additions": 0, "deletions": 0})
-        seen_head = entry.get("head")
+        branch = branch_ref["name"]
+        entry = cache.get(name) or {"head": None, "additions": 0, "deletions": 0}
+        mode = entry.get("author_mode") or "id"
+        rebuilding = entry.get("v") != CACHE_VERSION
+        # Start from the root, so the walk below replaces the total rather than
+        # topping up one this repo's entry may never have counted in full.
+        seen_head = None if rebuilding else entry.get("head")
+        if rebuilding and entry.get("head"):
+            print(f"  ~ {name}: recounting from the root", file=sys.stderr)
 
-        new_add = new_del = 0
-        new_head = None
-        cursor = None
-        done = False
-        while not done:
-            try:
-                data = _post(HISTORY_QUERY, {
-                    "owner": owner, "name": repo_name,
-                    "branch": branch_ref["name"], "id": user_id, "cursor": cursor,
-                }, token)
-            except (urllib.error.HTTPError, RuntimeError) as exc:
-                print(f"  ! skipping {name}: {exc}", file=sys.stderr)
-                break
+        add = dele = counted = 0
+        tip = None
+        matched = complete = False
 
-            target = (data.get("repository") or {}).get("ref") or {}
-            history = (target.get("target") or {}).get("history")
-            if not history:
-                break
+        if mode == "id":
+            add, dele, tip, counted, matched, complete, _ = _walk_history(
+                owner, repo_name, branch, {"id": user_id}, token, seen_head)
 
-            for node in history["nodes"]:
-                if new_head is None:
-                    new_head = node["oid"]
-                if node["oid"] == seen_head:
-                    done = True
-                    break
-                new_add += node["additions"]
-                new_del += node["deletions"]
+        # An author-filtered history is empty when none of the commit emails are
+        # linked to the account. Walk the branch itself and keep what is ours.
+        if mode == "commits" or (complete and not matched and not counted):
+            add, dele, tip, counted, matched, complete, emails = _walk_history(
+                owner, repo_name, branch, None, token, seen_head, accept=_own_commit)
+            if counted and mode != "commits":
+                mode = "commits"
+                print(f"  ~ {name}: no commits linked to the account, attributing "
+                      f"by email instead ({', '.join(sorted(emails))})", file=sys.stderr)
 
-            if done or not history["pageInfo"]["hasNextPage"]:
-                break
-            cursor = history["pageInfo"]["endCursor"]
+        if not complete:
+            # Bank nothing: a head saved here would hide every commit the walk
+            # never reached, permanently, from the next run onwards.
+            print(f"  ! {name}: partial history walk, keeping the previous counts",
+                  file=sys.stderr)
+            additions = entry["additions"]
+            deletions = entry["deletions"]
+            head, version = entry.get("head"), entry.get("v")
+        elif matched:
+            additions = entry["additions"] + add
+            deletions = entry["deletions"] + dele
+            head, version = tip or seen_head, CACHE_VERSION
+        else:
+            # Reached the root without meeting the cached head — new repo, or one
+            # that was rebased or force-pushed. This walk *is* the whole total.
+            additions, deletions, head = add, dele, tip
+            version = CACHE_VERSION
 
         cache[name] = {
-            "head": new_head or seen_head,
-            "additions": entry["additions"] + new_add,
-            "deletions": entry["deletions"] + new_del,
+            "id": repo.get("id") or entry.get("id"),
+            "v": version,
+            "head": head,
+            "additions": additions,
+            "deletions": deletions,
+            "author_mode": mode,
             "languages": {e["node"]["name"]: e["size"]
                           for e in (repo.get("languages") or {}).get("edges") or []}
                          or entry.get("languages", {}),
@@ -657,8 +759,20 @@ def check_fit(r):
     if PAD + advance(totals, 10) + 24 > x1 - advance(LINKS, 10):
         problems.append(f"footer totals and LINKS collide: {LINKS!r}")
 
+    cache = load_cache()
+    for bay in BAYS:
+        if bay["slug"] not in cache:
+            problems.append(f"no cache entry for {bay['slug']!r} — renamed, or "
+                            f"deleted? the row would silently read zero")
+
     note_limit = x1 - LOC_COL - BAR_GAP - BAR_W - 12
+    bar_edge = x1 - LOC_COL - BAR_GAP
     for bay in r["bays"]:
+        if PAD + 18 + advance(bay["label"], 12) > PAD + 180 - 8:
+            problems.append(f"label overruns the stack column: {bay['label']!r}")
+        lines = kilo(bay["loc"]) if bay["loc"] else "—"
+        if x1 - LOC_COL - advance(lines, 11) < bar_edge:
+            problems.append(f"lines value runs back into its bar: {lines!r}")
         if PAD + 190 + advance(bay["stack"], 10) > PAD + 300 - 8:
             problems.append(f"stack overruns its column: {bay['stack']!r}")
         if PAD + 300 + advance(bay["note"], 10) > note_limit:
