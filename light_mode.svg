@@ -39,15 +39,15 @@ line {stroke-width: 1;}
 <text x="22.0" y="43.0" font-size="9" class="f-dim" letter-spacing="1.6">PROJECT LEAD @ PERSISTENT</text>
 <text x="818.0" y="40.0" font-size="9" class="f-ok" text-anchor="end" letter-spacing="1.4">ONLINE</text>
 <circle cx="773.0" cy="36.5" r="3" class="f-ok" id="led"/>
-<text x="818.0" y="24.0" font-size="11" class="fg" text-anchor="end">10y 234d</text>
+<text x="818.0" y="24.0" font-size="11" class="fg" text-anchor="end">10y 235d</text>
 <text x="740.0" y="24.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">UPTIME</text>
 <text x="740.0" y="40.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">node pune-01</text>
 <rect x="22.0" y="78.0" width="256.0" height="106.0" class="f-panel" stroke="#d9e0e8" rx="6"/>
 <text x="36.0" y="98.0" font-size="9" class="f-dim" letter-spacing="1.8">LINES WRITTEN</text>
-<text x="36.0" y="130.0" font-size="27" class="fg" font-weight="600">1,478,167</text>
-<rect x="36.0" y="144" width="202.6" height="9" fill="#1a7f37"/>
-<rect x="238.1" y="144" width="26.4" height="9" fill="#cf222e"/>
-<text x="36.0" y="171.0" font-size="9" class="f-dim">−189,702 erased · 18 repos</text>
+<text x="36.0" y="130.0" font-size="27" class="fg" font-weight="600">1,440,186</text>
+<rect x="36.0" y="144" width="206.1" height="9" fill="#1a7f37"/>
+<rect x="241.6" y="144" width="22.9" height="9" fill="#cf222e"/>
+<text x="36.0" y="171.0" font-size="9" class="f-dim">−157,087 erased · 18 repos</text>
 <rect x="292.0" y="78.0" width="256.0" height="106.0" class="f-panel" stroke="#d9e0e8" rx="6"/>
 <text x="306.0" y="98.0" font-size="9" class="f-dim" letter-spacing="1.8">NPM INSTALLS</text>
 <text x="306.0" y="130.0" font-size="27" class="fg" font-weight="600">9,864</text>
@@ -89,37 +89,37 @@ line {stroke-width: 1;}
 <text x="22.0" y="220.0" font-size="9" class="f-dim" letter-spacing="1.8">LANGUAGE MIX</text>
 <clipPath id="langbar"><rect x="22" y="230" width="796" height="16" rx="3"/></clipPath>
 <g clip-path="url(#langbar)">
-<rect x="22.0" y="230" width="462.9" height="16" fill="#3178c6"/>
-<rect x="484.4" y="230" width="284.8" height="16" fill="#00add8"/>
-<rect x="768.7" y="230" width="25.6" height="16" fill="#f1e05a"/>
-<rect x="793.8" y="230" width="18.1" height="16" fill="#b07219"/>
-<rect x="811.4" y="230" width="2.6" height="16" fill="#89e051"/>
-<rect x="813.5" y="230.0" width="4.5" height="16.0" class="f-faint" opacity="0.6"/>
+<rect x="22.0" y="230" width="448.6" height="16" fill="#3178c6"/>
+<rect x="470.1" y="230" width="292.9" height="16" fill="#00add8"/>
+<rect x="762.5" y="230" width="28.3" height="16" fill="#f1e05a"/>
+<rect x="790.3" y="230" width="18.6" height="16" fill="#b07219"/>
+<rect x="808.4" y="230" width="3.3" height="16" fill="#89e051"/>
+<rect x="811.1" y="230.0" width="6.9" height="16.0" class="f-faint" opacity="0.6"/>
 </g>
 <circle cx="25.5" cy="260.5" r="3.2" fill="#3178c6"/>
-<text x="35.0" y="264.0" font-size="10" class="f-dim">TypeScript 858.5k</text>
+<text x="35.0" y="264.0" font-size="10" class="f-dim">TypeScript 810.6k</text>
 <circle cx="160.5" cy="260.5" r="3.2" fill="#00add8"/>
-<text x="170.0" y="264.0" font-size="10" class="f-dim">Go 527.7k</text>
+<text x="170.0" y="264.0" font-size="10" class="f-dim">Go 528.9k</text>
 <circle cx="247.5" cy="260.5" r="3.2" fill="#f1e05a"/>
-<text x="257.0" y="264.0" font-size="10" class="f-dim">JavaScript 46.7k</text>
+<text x="257.0" y="264.0" font-size="10" class="f-dim">JavaScript 50.2k</text>
 <circle cx="376.5" cy="260.5" r="3.2" fill="#b07219"/>
 <text x="386.0" y="264.0" font-size="10" class="f-dim">Java 32.7k</text>
 <circle cx="469.5" cy="260.5" r="3.2" fill="#89e051"/>
-<text x="479.0" y="264.0" font-size="10" class="f-dim">Shell 3.8k</text>
+<text x="479.0" y="264.0" font-size="10" class="f-dim">Shell 5.0k</text>
 <circle cx="562.5" cy="260.5" r="3.2" fill="#c2ccd6"/>
-<text x="572.0" y="264.0" font-size="10" class="f-dim">other 8.4k</text>
+<text x="572.0" y="264.0" font-size="10" class="f-dim">other 12.4k</text>
 <text x="22.0" y="304.0" font-size="9" class="f-dim" letter-spacing="1.8">DRIVE BAYS</text>
 <text x="722.0" y="304.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">LINES</text>
 <text x="818.0" y="304.0" font-size="9" class="f-dim" text-anchor="end" letter-spacing="1.2">STATUS</text>
 <line x1="22.0" y1="312.0" x2="818.0" y2="312.0" class="s-edge"/>
 <text x="22.0" y="327.0" font-size="9" class="f-dim">0</text>
-<text x="40.0" y="327.0" font-size="12" class="fg">panchang-ts</text>
+<text x="40.0" y="327.0" font-size="12" class="fg">panchang</text>
 <circle cx="202.0" cy="323.0" r="3.2" fill="#3178c6"/>
 <text x="212.0" y="327.0" font-size="10" class="f-dim">TypeScript</text>
-<text x="322.0" y="327.0" font-size="10" class="f-dim" opacity="0.75">ephemeris core</text>
+<text x="322.0" y="327.0" font-size="10" class="f-dim" opacity="0.75">Go · ephemeris core</text>
 <rect x="544.0" y="319.0" width="130.0" height="6.0" class="f-faint" rx="1" opacity="0.5"/>
 <rect x="544.0" y="319.0" width="130.0" height="6.0" class="f-accent" rx="1"/>
-<text x="722.0" y="327.0" font-size="11" class="fg" text-anchor="end">99.8k</text>
+<text x="722.0" y="327.0" font-size="11" class="fg" text-anchor="end">1143.5k</text>
 <text x="818.0" y="327.0" font-size="11" class="f-dim" text-anchor="end">npm</text>
 <text x="22.0" y="352.0" font-size="9" class="f-dim">1</text>
 <text x="40.0" y="352.0" font-size="12" class="fg">dharmagya</text>
@@ -127,7 +127,7 @@ line {stroke-width: 1;}
 <text x="212.0" y="352.0" font-size="10" class="f-dim">React Native</text>
 <text x="322.0" y="352.0" font-size="10" class="f-dim" opacity="0.75">ios · android</text>
 <rect x="544.0" y="344.0" width="130.0" height="6.0" class="f-faint" rx="1" opacity="0.5"/>
-<rect x="544.0" y="344.0" width="60.4" height="6.0" class="f-accent" rx="1"/>
+<rect x="544.0" y="344.0" width="5.3" height="6.0" class="f-accent" rx="1"/>
 <text x="722.0" y="352.0" font-size="11" class="fg" text-anchor="end">46.4k</text>
 <text x="818.0" y="352.0" font-size="11" class="f-dim" text-anchor="end">app store</text>
 <text x="22.0" y="377.0" font-size="9" class="f-dim">2</text>
@@ -136,7 +136,7 @@ line {stroke-width: 1;}
 <text x="212.0" y="377.0" font-size="10" class="f-dim">WebAssembly</text>
 <text x="322.0" y="377.0" font-size="10" class="f-dim" opacity="0.75">browser only</text>
 <rect x="544.0" y="369.0" width="130.0" height="6.0" class="f-faint" rx="1" opacity="0.5"/>
-<rect x="544.0" y="369.0" width="50.2" height="6.0" class="f-accent" rx="1"/>
+<rect x="544.0" y="369.0" width="4.4" height="6.0" class="f-accent" rx="1"/>
 <text x="722.0" y="377.0" font-size="11" class="fg" text-anchor="end">38.6k</text>
 <text x="818.0" y="377.0" font-size="11" class="f-dim" text-anchor="end">live</text>
 <text x="22.0" y="402.0" font-size="9" class="f-dim">3</text>
@@ -145,10 +145,11 @@ line {stroke-width: 1;}
 <text x="212.0" y="402.0" font-size="10" class="f-dim">Canvas</text>
 <text x="322.0" y="402.0" font-size="10" class="f-dim" opacity="0.75">store assets</text>
 <rect x="544.0" y="394.0" width="130.0" height="6.0" class="f-faint" rx="1" opacity="0.5"/>
-<text x="722.0" y="402.0" font-size="11" class="fg" text-anchor="end">—</text>
+<rect x="544.0" y="394.0" width="3.6" height="6.0" class="f-accent" rx="1"/>
+<text x="722.0" y="402.0" font-size="11" class="fg" text-anchor="end">31.6k</text>
 <text x="818.0" y="402.0" font-size="11" class="f-dim" text-anchor="end">live</text>
 <line x1="22.0" y1="424.0" x2="818.0" y2="424.0" class="s-edge"/>
-<text x="22.0" y="442.0" font-size="10" class="f-dim">2,446 commits · 18 repos · 10 years</text>
+<text x="22.0" y="442.0" font-size="10" class="f-dim">1,959 commits · 18 repos · 10 years</text>
 <text x="818.0" y="442.0" font-size="10" class="f-dim" text-anchor="end">ishank.dev  ·  in/ishankg  ·  ishank1995@gmail.com</text>
-<!--readings {"additions": 1478167, "attributed": 1477869, "bays": [{"label": "panchang-ts", "loc": 99850, "note": "ephemeris core", "stack": "TypeScript", "status": "npm"}, {"label": "dharmagya", "loc": 46385, "note": "ios \u00b7 android", "stack": "React Native", "status": "app store"}, {"label": "transmute", "loc": 38582, "note": "browser only", "stack": "WebAssembly", "status": "live"}, {"label": "onstage", "loc": 0, "note": "store assets", "stack": "Canvas", "status": "live"}], "commits": 2446, "deletions": 189702, "lang_other": 8401, "langs": [["TypeScript", 858548], ["Go", 527745], ["JavaScript", 46670], ["Java", 32679], ["Shell", 3826]], "npm_packages": ["panchang-ts"], "npm_total": 9864, "npm_weeks": [357, 1058, 256, 230, 442, 148, 464, 477, 131, 260, 481, 98, 126, 149, 164, 107, 144, 530, 737, 989, 1259, 462, 633], "repos": 18, "shipped": 4, "stamp": "2026-09-04 04:10 UTC", "uptime_d": 234, "uptime_y": 10} -->
+<!--readings {"additions": 1440186, "attributed": 1439888, "bays": [{"label": "panchang", "loc": 1143458, "note": "Go \u00b7 ephemeris core", "stack": "TypeScript", "status": "npm"}, {"label": "dharmagya", "loc": 46385, "note": "ios \u00b7 android", "stack": "React Native", "status": "app store"}, {"label": "transmute", "loc": 38582, "note": "browser only", "stack": "WebAssembly", "status": "live"}, {"label": "onstage", "loc": 31592, "note": "store assets", "stack": "Canvas", "status": "live"}], "commits": 1959, "deletions": 157087, "lang_other": 12417, "langs": [["TypeScript", 810650], ["Go", 528915], ["JavaScript", 50217], ["Java", 32679], ["Shell", 5010]], "npm_packages": ["panchang-ts"], "npm_total": 9864, "npm_weeks": [357, 1058, 256, 230, 442, 148, 464, 477, 131, 260, 481, 98, 126, 149, 164, 107, 144, 530, 737, 989, 1259, 462, 633], "repos": 18, "shipped": 4, "stamp": "2026-09-04 15:29 UTC", "uptime_d": 235, "uptime_y": 10} -->
 </svg>
